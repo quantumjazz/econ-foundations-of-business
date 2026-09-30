@@ -1,9 +1,6 @@
-# Quarto build output (both profiles) and caches
-/_site/
-/_site-instructor/
+# Quarto cache
 /.quarto/
 **/*.quarto_ipynb
-/site_libs/
 
 # Local tooling
 /.claude/

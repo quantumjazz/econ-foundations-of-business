@@ -1,28 +1,10 @@
 project:
-  type: website
-  output-dir: _site
+  type: default
   render:
     - index.qmd
     - "lectures/*/index.qmd"
-  resources:
-    - "lectures/*/img/**"
-    - "lectures/*/data/**"
-
-# Two mutually exclusive build profiles. The first one (public) is the
-# default, so a plain `quarto render` never includes instructor-only content.
-#   quarto render --profile public       -> _site/            (GitHub Pages)
-#   quarto preview lectures/entrepreneurship/index.qmd --profile instructor
-#                                        -> _site-instructor/ (what Victor presents from)
-profile:
-  group:
-    - [public, instructor]
 
 lang: bg
-
-website:
-  title: "Икономически основи на бизнеса"
-  description: "Лекции по „Икономически основи на бизнеса“ · Нов български университет"
-  page-navigation: false
 
 filters:
   - theme/lecture.lua

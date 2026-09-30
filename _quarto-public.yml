@@ -1,5 +1,0 @@
-# Public profile: what students see on GitHub Pages. Deployed only after the
-# lecture (see .github/workflows/publish.yml), because slides 12–14 debrief
-# the game.
-project:
-  output-dir: _site
