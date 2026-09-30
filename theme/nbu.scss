@@ -37,3 +37,38 @@ $link-color: #222;
   margin: 0 0 0.5em;
   break-inside: avoid;
 }
+
+// Game trees: at each step the losing branch fades and the chosen one thickens.
+.reveal svg .fragment.prune {
+  opacity: 1;
+  visibility: inherit;
+}
+
+.reveal svg .fragment.prune.visible {
+  opacity: 0.25;
+}
+
+.reveal svg .fragment.bold {
+  opacity: 1;
+  visibility: inherit;
+}
+
+.reveal svg .fragment.bold.visible line {
+  stroke-width: 5;
+}
+
+// Widgets: black sliders, readouts at table size.
+.reveal input[type="range"] {
+  accent-color: #222;
+}
+
+.reveal form[class^="oi-"],
+.reveal form[class*=" oi-"] {
+  font-size: 20px;
+  --label-width: 300px;
+  --input-width: 200px;
+}
+
+.reveal .readout {
+  font-size: 0.7em;
+}

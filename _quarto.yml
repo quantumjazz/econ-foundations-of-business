@@ -13,6 +13,10 @@ format:
   revealjs:
     theme: [default, theme/nbu.scss]
     slide-number: c/t
+    # Keep slides (and their numbers) at every window width, instead of
+    # reveal.js switching narrow windows to its scrolling view.
+    scroll-view:
+      activation-width: 0
     hash: true
     center: false
     transition: fade

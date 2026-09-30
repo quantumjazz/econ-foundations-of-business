@@ -34,12 +34,22 @@ Baumol, Litan & Schramm (2007): предприемач е всеки, нов и�
 
 ## Какъв тип е всеки? {#s06}
 
+:::: {.columns}
+::: {.column width="50%"}
 1. Шофьор в Bolt вечер след работа
 2. Служител в банка, който създава нов продукт
 3. Франчайз на верига кафенета
 4. Основател на стартъп
+:::
 
-Разграничения: по възможност или по необходимост; предприемач или предприемач в организацията; иновация или копиране.
+::: {.column width="50%"}
+|  |  |
+|---|---|
+| по възможност | по необходимост |
+| предприемач | предприемач в организацията |
+| иновация | копиране |
+:::
+::::
 
 # Къде отива талантът?
 
@@ -84,14 +94,89 @@ Baumol, Litan & Schramm (2007): предприемач е всеки, нов и�
 
 ## Оцеляване и оборот на фирмите {#s14}
 
-От фирмите, създадени в България през 2015 г., през 2020 г. са активни 43% (ЕС-27: 46%). Около 4 от 10 нови фирми оцеляват пет години, близо до средното за ЕС.
+:::: {.columns}
+::: {.column width="52%"}
+```{ojs}
+viewof guessText = Inputs.text({ label: "Вашата прогноза, %", placeholder: "медианата на класа", width: 140 })
+guess = { const v = parseFloat(String(guessText).replace(",", ".")); return v >= 0 && v <= 100 ? v : NaN; }
+```
 
-Новосъздадени и закрити фирми за година, % от активните:
+```{ojs}
+survival = {
+  const rows = bd.filter((d) => d.indicator === "survival_5y");
+  const years = d3.intersection(...["BG", "EU27_2020"].map((g) => rows.filter((d) => d.geo === g).map((d) => d.year)));
+  const year = d3.max(years);
+  const pick = rows.filter((d) => d.year === year)
+    .map((d) => ({ ...d, label: d.geo === "BG" ? "България" : "ЕС-27" }))
+    .sort((a, b) => (a.geo === "BG" ? -1 : 1));
+  return { year, rows: pick };
+}
+```
 
-|  | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 |
-|---|---|---|---|---|---|---|
-| България | 23,0 | 24,0 | 23,7 | 18,3 | 18,3 | 18,7 |
-| ЕС-27 | 16,8 | 18,1 | 16,1 | 18,6 | 18,9 | 19,0 |
+```{ojs}
+Plot.plot({
+  width: 560,
+  height: 250,
+  marginLeft: 104,
+  marginRight: 56,
+  marginTop: 40,
+  marginBottom: 48,
+  style: { fontFamily: font, fontSize: "17px", color: ink },
+  ariaLabel: "Петгодишна преживяемост на новите фирми",
+  x: { domain: [0, 100], ticks: [0, 25, 50, 75, 100], tickFormat: (d) => `${d}%`, label: `живи след 5 години (фирми, създадени през ${survival.year - 5} г.)` },
+  y: { label: null, domain: survival.rows.map((d) => d.label), tickSize: 0 },
+  marks: [
+    Plot.barX(survival.rows, { x: "value", y: "label", fill: (d) => (d.geo === "BG" ? "#444" : "#aaa"), insetTop: 8, insetBottom: 8 }),
+    Plot.text(survival.rows, { x: "value", y: "label", text: (d) => pct(d.value / 100), dx: 8, textAnchor: "start", fontSize: 19, fill: ink }),
+    Plot.ruleX([0], { stroke: ink }),
+    Number.isFinite(guess) ? Plot.ruleX([guess], { stroke: ink, strokeWidth: 2.5, strokeDasharray: "7 5" }) : null,
+    Number.isFinite(guess) ? Plot.text([guess], { x: (d) => d, frameAnchor: "top", dy: -24, text: (d) => `Вашата прогноза: ${num(d)}%`, fontSize: 17, fill: ink }) : null,
+  ],
+})
+```
+:::
+
+::: {.column .fragment width="48%"}
+```{ojs}
+Plot.plot({
+  width: 500,
+  height: 300,
+  marginLeft: 44,
+  marginRight: 100,
+  marginTop: 42,
+  style: { fontFamily: font, fontSize: "15px", color: ink },
+  ariaLabel: "Нови плюс закрити фирми, % от активните, България и ЕС-27",
+  x: { label: null, tickFormat: (d) => String(d), ticks: [2010, 2015, 2020, 2024] },
+  y: { domain: [0, 30], label: "нови + закрити фирми, % от активните", grid: true },
+  marks: [
+    Plot.ruleX([2020.5], { stroke: "#999", strokeDasharray: "4 4" }),
+    Plot.text([2020.5], { x: (d) => d, frameAnchor: "top", dy: -14, text: () => "нова методология", textAnchor: "start", dx: -4, fill: "#666", fontSize: 13 }),
+    Plot.line(churn, { x: "year", y: "value", z: (d) => d.geo + d.series, stroke: (d) => (d.geo === "BG" ? ink : "#999"), strokeWidth: 2.5 }),
+    Plot.dot(churn, { x: "year", y: "value", fill: (d) => (d.geo === "BG" ? ink : "#999"), r: 3 }),
+    Plot.text(churnEnds, { x: "year", y: "value", text: "label", dx: 8, textAnchor: "start", fill: (d) => (d.geo === "BG" ? ink : "#666") }),
+  ],
+})
+```
+:::
+::::
+
+Около 4 от 10 нови фирми в България оцеляват пет години, близо до средното за ЕС.
+
+```{ojs}
+//| output: false
+// Shared setup for the charts on this slide and the critical-loss widget.
+Plot = import("https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6.17/+esm")
+import { criticalLoss, profitChange, lossVerdict } from "./lib/models.js"
+import { pct, num, eur } from "./lib/format.js"
+ink = "#222"
+font = "Helvetica Neue, Helvetica, Arial, sans-serif"
+bd = FileAttachment("data/eurostat_bd.csv").csv({ typed: true })
+churn = bd.filter((d) => d.indicator === "churn" && d.year >= 2008)
+churnEnds = ["BG", "EU27_2020"].map((g) => {
+  const last = d3.greatest(churn.filter((d) => d.geo === g), (d) => d.year);
+  return { ...last, label: g === "BG" ? "България" : "ЕС-27" };
+})
+```
 
 ::: aside
 Източник: Eurostat, bd_9bd_sz_cl_r2 (до 2020 г.) и bd_size (от 2021 г.), бизнес икономика. От 2021 г. методологията е нова и данните преди и след това не са напълно съпоставими.
@@ -143,15 +228,68 @@ Baumol, Litan & Schramm (2007): предприемач е всеки, нов и�
 
 ## Критична загуба {#s20}
 
-Критичната загуба е делът клиенти, при чиято загуба повишението на цената престава да е изгодно:
-
+:::: {.columns}
+::: {.column width="46%"}
 КЗ = *X* / (*X* + *M*)
 
-*X* е повишението на цената, а *M* е маржът: цената минус пределния разход, като дял от цената.
+```{ojs}
+viewof X = Inputs.range([1, 20], { step: 1, value: 10, label: "Повишение на цената X, %" })
+```
 
-Пример: капучино в кафене до НБУ поскъпва от 3,00 € на 3,30 € (*X* = 10%) при марж *M* = 40%. Тогава КЗ = 10 / (10 + 40) = 20%. Ако очакваме да загубим 15% от клиентите, повишението е изгодно; при 25% не е.
+```{ojs}
+viewof M = Inputs.range([5, 80], { step: 5, value: 40, label: "Марж M, %" })
+```
+
+```{ojs}
+viewof L = Inputs.range([0, 60], { step: 1, value: 15, label: "Очаквана загуба на клиенти L, %" })
+```
+
+```{ojs}
+html`<p class="readout">Критична загуба: <strong>${pct(cl)}</strong><br>Промяна на печалбата: <strong>${pct(dProfit, { max: 2, sign: true })}</strong></p>`
+```
+:::
+
+::: {.column width="54%"}
+```{ojs}
+html`<p class="readout">Капучино в кафене до НБУ: от ${eur(3)} на <strong>${eur(3 * (1 + X / 100))}</strong></p>`
+```
+
+```{ojs}
+Plot.plot({
+  width: 560,
+  height: 200,
+  marginLeft: 16,
+  marginRight: 28,
+  marginTop: 52,
+  marginBottom: 52,
+  style: { fontFamily: font, fontSize: "18px", color: ink },
+  ariaLabel: "Очаквана загуба на клиенти спрямо критичната загуба",
+  x: { domain: [0, 0.6], ticks: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6], tickFormat: (d) => pct(d, { min: 0, max: 0 }), label: "клиенти, които си тръгват" },
+  y: { axis: null, domain: ["L"] },
+  marks: [
+    Plot.barX([L / 100], { x: (d) => d, y: () => "L", fill: "#999", insetTop: 6, insetBottom: 6 }),
+    Plot.ruleX([cl], { stroke: ink, strokeWidth: 3 }),
+    Plot.text([cl], { x: (d) => d, frameAnchor: "top", dy: -30, text: (d) => `КЗ = ${pct(d)}`, fontSize: 17, fill: ink }),
+    Plot.ruleX([0], { stroke: ink }),
+  ],
+})
+```
+
+```{ojs}
+html`<p class="readout"><strong>${clText}</strong></p>`
+```
+:::
+::::
 
 Колкото по-голяма е разликата между приходи и разходи, толкова по-малко клиенти можеш да си позволиш да загубиш.
+
+```{ojs}
+//| output: false
+cl = criticalLoss(X / 100, M / 100)
+dProfit = profitChange(X / 100, M / 100, L / 100)
+clState = lossVerdict(L / 100, cl)
+clText = ({ profit: "Повишението е изгодно", loss: "Неизгодно: клиентите имат заместители, пазарът е по-широк", edge: "На ръба" })[clState]
+```
 
 ## FTC срещу Meta (2025) {#s21}
 
@@ -201,18 +339,38 @@ Baumol, Litan & Schramm (2007): предприемач е всеки, нов и�
 
 :::: {.columns}
 ::: {.column width="62%"}
-![](img/entry-game.svg){fig-alt="Дърво на играта. Предприемачът избира дали да влезе. Ако не влезе, печалбите са 0 за него и 10 за заварения. Ако влезе, завареният избира: борба дава −1 и 2, допускане дава 5 и 6."}
+```{=html}
+<svg viewBox="0 0 920 430" style="width:100%;height:auto" role="img" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' fill="#222"><title>Играта на навлизане: предприемачът избира дали да влезе; ако влезе, завареният избира борба или допускане. Печалби: не влиза (0, 10), бори се (−1, 2), допуска (5, 6).</title>
+<g class="fragment prune" data-fragment-index="2"><line x1="240" y1="200" x2="510" y2="70" stroke="#222" stroke-width="2"/><text x="370.7" y="126.0" font-size="30" text-anchor="middle" transform="rotate(-25.7 370.7 126.0)">не влиза</text><circle cx="510" cy="70" r="4" fill="#222"/><text x="526" y="80" font-size="30" text-anchor="start">(0, 10)</text></g>
+<g class="fragment" data-fragment-index="2"><path d="M362.2 156.7L350.0 131.5M373.0 151.5L360.8 126.3" stroke="#222" stroke-width="3" stroke-linecap="round"/></g>
+<g class="fragment bold" data-fragment-index="2"><line x1="240" y1="200" x2="510" y2="310" stroke="#222" stroke-width="2"/></g>
+<text x="362.7" y="285.1" font-size="30" text-anchor="middle" transform="rotate(22.2 362.7 285.1)">влиза</text>
+<g class="fragment prune" data-fragment-index="1"><line x1="510" y1="310" x2="770" y2="230" stroke="#222" stroke-width="2"/><text x="637.1" y="260.4" font-size="30" text-anchor="middle" transform="rotate(-17.1 637.1 260.4)">бори се</text><circle cx="770" cy="230" r="4" fill="#222"/><text x="786" y="240" font-size="30" text-anchor="start">(−1, 2)</text></g>
+<g class="fragment" data-fragment-index="1"><path d="M625.4 289.1L617.1 262.4M636.9 285.6L628.6 258.9" stroke="#222" stroke-width="3" stroke-linecap="round"/></g>
+<g class="fragment bold" data-fragment-index="1"><line x1="510" y1="310" x2="770" y2="390" stroke="#222" stroke-width="2"/></g>
+<text x="630.4" y="381.1" font-size="30" text-anchor="middle" transform="rotate(17.1 630.4 381.1)">допуска</text>
+<circle cx="770" cy="390" r="4" fill="#222"/>
+<text x="786" y="400" font-size="30" text-anchor="start">(5, 6)</text>
+<circle cx="240" cy="200" r="6" fill="#222"/>
+<circle cx="510" cy="310" r="6" fill="#222"/>
+<text x="226" y="210" font-size="30" text-anchor="end">Предприемач</text>
+<text x="496" y="354" font-size="30" text-anchor="end">Заварен</text>
+</svg>
+```
 :::
 
 ::: {.column width="38%"}
 Печалби: (предприемач, заварен).
 
-::: {.incremental}
+::: {.fragment fragment-index=1}
 1. Завареният сравнява 2 и 6 и допуска.
+:::
+
+::: {.fragment fragment-index=2}
 2. Предприемачът сравнява 0 и 5 и влиза.
 :::
 
-::: fragment
+::: {.fragment fragment-index=3}
 Заплахата не е достоверна.
 :::
 :::
@@ -224,18 +382,45 @@ Baumol, Litan & Schramm (2007): предприемач е всеки, нов и�
 
 :::: {.columns}
 ::: {.column width="62%"}
-![](img/commitment-game.svg){fig-alt="Дърво на играта с ангажимент. Завареният първо избира дали да построи капацитет за 3. Без капацитет изходът е като на предишния слайд: 5 и 6. С капацитет: ако новият не влезе, 0 и 7; ако влезе и завареният се бори, −1 и 5; ако допусне, 5 и 3."}
+```{=html}
+<svg viewBox="0 0 1040 570" style="width:100%;height:auto" role="img" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' fill="#222"><title>Играта с ангажимент: завареният първо избира дали да построи капацитет за 3. Без капацитет изходът е като на предишния слайд, (5, 6). С капацитет: не влиза (0, 7), влиза и завареният се бори (−1, 5), влиза и завареният допуска (5, 3).</title>
+<g class="fragment prune" data-fragment-index="3"><line x1="150" y1="250" x2="400" y2="90" stroke="#222" stroke-width="2"/><text x="269.6" y="161.6" font-size="30" text-anchor="middle" transform="rotate(-32.6 269.6 161.6)">без капацитет</text><circle cx="400" cy="90" r="4" fill="#222"/><text x="416" y="100" font-size="30" text-anchor="start">(5, 6)</text><text x="416" y="136" font-size="24" text-anchor="start">както на предишния слайд</text></g>
+<g class="fragment" data-fragment-index="3"><path d="M265.0 193.0L249.9 169.4M275.1 186.6L260.0 163.0" stroke="#222" stroke-width="3" stroke-linecap="round"/></g>
+<g class="fragment bold" data-fragment-index="3"><line x1="150" y1="250" x2="400" y2="360" stroke="#222" stroke-width="2"/></g>
+<text x="279.0" y="295.8" font-size="30" text-anchor="middle" transform="rotate(23.7 279.0 295.8)">капацитет (−3)</text>
+<g class="fragment prune" data-fragment-index="2"><line x1="400" y1="360" x2="650" y2="470" stroke="#222" stroke-width="2"/><text x="511.9" y="444.7" font-size="30" text-anchor="middle" transform="rotate(23.7 511.9 444.7)">влиза</text><g class="fragment prune" data-fragment-index="1"><line x1="650" y1="470" x2="900" y2="540" stroke="#222" stroke-width="2"/><text x="766.2" y="536.3" font-size="30" text-anchor="middle" transform="rotate(15.6 766.2 536.3)">допуска</text><circle cx="900" cy="540" r="4" fill="#222"/><text x="916" y="550" font-size="30" text-anchor="start">(5, 3)</text></g><g class="fragment" data-fragment-index="1"><path d="M752.9 513.4L760.5 486.4M764.5 516.6L772.1 489.6" stroke="#222" stroke-width="3" stroke-linecap="round"/></g><g class="fragment bold" data-fragment-index="1"><line x1="650" y1="470" x2="900" y2="410" stroke="#222" stroke-width="2"/></g><text x="772.7" y="430.3" font-size="30" text-anchor="middle" transform="rotate(-13.5 772.7 430.3)">бори се</text><circle cx="900" cy="410" r="4" fill="#222"/><text x="916" y="420" font-size="30" text-anchor="start">(−1, 5)</text><circle cx="650" cy="470" r="6" fill="#222"/><text x="636" y="514" font-size="30" text-anchor="end">Заварен</text></g>
+<g class="fragment" data-fragment-index="2"><path d="M501.4 419.9L512.6 394.3M512.4 424.7L523.6 399.1" stroke="#222" stroke-width="3" stroke-linecap="round"/></g>
+<g class="fragment bold" data-fragment-index="2"><line x1="400" y1="360" x2="650" y2="280" stroke="#222" stroke-width="2"/></g>
+<text x="522.0" y="310.5" font-size="30" text-anchor="middle" transform="rotate(-17.7 522.0 310.5)">не влиза</text>
+<circle cx="650" cy="280" r="4" fill="#222"/>
+<text x="666" y="290" font-size="30" text-anchor="start">(0, 7)</text>
+<g class="fragment" data-fragment-index="4"><rect x="904" y="386" width="122" height="46" rx="8" fill="none" stroke="#222" stroke-width="2.5" stroke-dasharray="8 6"/></g>
+<circle cx="150" cy="250" r="6" fill="#222"/>
+<circle cx="400" cy="360" r="6" fill="#222"/>
+<text x="136" y="260" font-size="30" text-anchor="end">Заварен</text>
+<text x="386" y="404" font-size="30" text-anchor="end">Предприемач</text>
+</svg>
+```
 :::
 
 ::: {.column width="38%"}
-::: {.incremental}
+::: {.fragment fragment-index=1}
 1. С капацитет борбата е по-изгодна (5 > 3): заплахата е достоверна.
+:::
+
+::: {.fragment fragment-index=2}
 2. Новият остава вън (0 > −1).
+:::
+
+::: {.fragment fragment-index=3}
 3. Завареният печели 7 вместо 6, затова строи.
+:::
+
+::: {.fragment fragment-index=4}
 4. Таен капацитет: новият влиза, завареният се бори и получава 5, по-малко, отколкото без капацитет.
 :::
 
-::: fragment
+::: {.fragment fragment-index=5}
 Ангажиментът работи само ако е видим и необратим (Dixit 1980).
 :::
 :::

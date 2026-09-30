@@ -29,8 +29,74 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-6f0bc8d16bce9a85ee44c87923bf5f68.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-df64e4dd21c284a356b7a20f8452ba27.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -123,6 +189,8 @@
       margin-right: 0; 
     }
   </style>
+  <script type="module" src="index_files/libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+  <link href="index_files/libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -200,13 +268,32 @@
 </section>
 <section id="s06" class="slide level2 scrollable">
 <h2>Какъв тип е всеки?</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <ol type="1">
 <li>Шофьор в Bolt вечер след работа</li>
 <li>Служител в банка, който създава нов продукт</li>
 <li>Франчайз на верига кафенета</li>
 <li>Основател на стартъп</li>
 </ol>
-<p>Разграничения: по възможност или по необходимост; предприемач или предприемач в организацията; иновация или копиране.</p>
+</div><div class="column" style="width:50%;">
+<table class="caption-top">
+<tbody>
+<tr class="odd">
+<td>по възможност</td>
+<td>по необходимост</td>
+</tr>
+<tr class="even">
+<td>предприемач</td>
+<td>предприемач в организацията</td>
+</tr>
+<tr class="odd">
+<td>иновация</td>
+<td>копиране</td>
+</tr>
+</tbody>
+</table>
+</div></div>
 </section></section>
 <section>
 <section id="къде-отива-талантът" class="title-slide slide level1 center">
@@ -284,41 +371,165 @@
 </section>
 <section id="s14" class="slide level2">
 <h2>Оцеляване и оборот на фирмите</h2>
-<p>От фирмите, създадени в България през 2015 г., през 2020 г. са активни 43% (ЕС-27: 46%). Около 4 от 10 нови фирми оцеляват пет години, близо до средното за ЕС.</p>
-<p>Новосъздадени и закрити фирми за година, % от активните:</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th></th>
-<th>2018</th>
-<th>2019</th>
-<th>2020</th>
-<th>2021</th>
-<th>2022</th>
-<th>2023</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>България</td>
-<td>23,0</td>
-<td>24,0</td>
-<td>23,7</td>
-<td>18,3</td>
-<td>18,3</td>
-<td>18,7</td>
-</tr>
-<tr class="even">
-<td>ЕС-27</td>
-<td>16,8</td>
-<td>18,1</td>
-<td>16,1</td>
-<td>18,6</td>
-<td>18,9</td>
-<td>19,0</td>
-</tr>
-</tbody>
-</table>
+<div class="columns">
+<div class="column" style="width:52%;">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="100" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 99;"><span id="cb1-100"><a href=""></a>viewof guessText <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">text</span>({ <span class="dt">label</span><span class="op">:</span> <span class="st">"Вашата прогноза, %"</span><span class="op">,</span> <span class="dt">placeholder</span><span class="op">:</span> <span class="st">"медианата на класа"</span><span class="op">,</span> <span class="dt">width</span><span class="op">:</span> <span class="dv">140</span> })</span>
+<span id="cb1-101"><a href=""></a>guess <span class="op">=</span> { <span class="kw">const</span> v <span class="op">=</span> <span class="pp">parseFloat</span>(<span class="bu">String</span>(guessText)<span class="op">.</span><span class="fu">replace</span>(<span class="st">","</span><span class="op">,</span> <span class="st">"."</span>))<span class="op">;</span> <span class="cf">return</span> v <span class="op">&gt;=</span> <span class="dv">0</span> <span class="op">&amp;&amp;</span> v <span class="op">&lt;=</span> <span class="dv">100</span> <span class="op">?</span> v <span class="op">:</span> <span class="kw">NaN</span><span class="op">;</span> }</span></code></pre></div><button title="Копирай в клипборда" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="104" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 103;"><span id="cb2-104"><a href=""></a>survival <span class="op">=</span> {</span>
+<span id="cb2-105"><a href=""></a>  <span class="kw">const</span> rows <span class="op">=</span> bd<span class="op">.</span><span class="fu">filter</span>((d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">indicator</span> <span class="op">===</span> <span class="st">"survival_5y"</span>)<span class="op">;</span></span>
+<span id="cb2-106"><a href=""></a>  <span class="kw">const</span> years <span class="op">=</span> d3<span class="op">.</span><span class="fu">intersection</span>(<span class="op">...</span>[<span class="st">"BG"</span><span class="op">,</span> <span class="st">"EU27_2020"</span>]<span class="op">.</span><span class="fu">map</span>((g) <span class="kw">=&gt;</span> rows<span class="op">.</span><span class="fu">filter</span>((d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">geo</span> <span class="op">===</span> g)<span class="op">.</span><span class="fu">map</span>((d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">year</span>)))<span class="op">;</span></span>
+<span id="cb2-107"><a href=""></a>  <span class="kw">const</span> year <span class="op">=</span> d3<span class="op">.</span><span class="fu">max</span>(years)<span class="op">;</span></span>
+<span id="cb2-108"><a href=""></a>  <span class="kw">const</span> pick <span class="op">=</span> rows<span class="op">.</span><span class="fu">filter</span>((d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">year</span> <span class="op">===</span> year)</span>
+<span id="cb2-109"><a href=""></a>    <span class="op">.</span><span class="fu">map</span>((d) <span class="kw">=&gt;</span> ({ <span class="op">...</span>d<span class="op">,</span> <span class="dt">label</span><span class="op">:</span> d<span class="op">.</span><span class="at">geo</span> <span class="op">===</span> <span class="st">"BG"</span> <span class="op">?</span> <span class="st">"България"</span> <span class="op">:</span> <span class="st">"ЕС-27"</span> }))</span>
+<span id="cb2-110"><a href=""></a>    <span class="op">.</span><span class="fu">sort</span>((a<span class="op">,</span> b) <span class="kw">=&gt;</span> (a<span class="op">.</span><span class="at">geo</span> <span class="op">===</span> <span class="st">"BG"</span> <span class="op">?</span> <span class="op">-</span><span class="dv">1</span> <span class="op">:</span> <span class="dv">1</span>))<span class="op">;</span></span>
+<span id="cb2-111"><a href=""></a>  <span class="cf">return</span> { year<span class="op">,</span> <span class="dt">rows</span><span class="op">:</span> pick }<span class="op">;</span></span>
+<span id="cb2-112"><a href=""></a>}</span></code></pre></div><button title="Копирай в клипборда" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="116" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 115;"><span id="cb3-116"><a href=""></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb3-117"><a href=""></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">560</span><span class="op">,</span></span>
+<span id="cb3-118"><a href=""></a>  <span class="dt">height</span><span class="op">:</span> <span class="dv">250</span><span class="op">,</span></span>
+<span id="cb3-119"><a href=""></a>  <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">104</span><span class="op">,</span></span>
+<span id="cb3-120"><a href=""></a>  <span class="dt">marginRight</span><span class="op">:</span> <span class="dv">56</span><span class="op">,</span></span>
+<span id="cb3-121"><a href=""></a>  <span class="dt">marginTop</span><span class="op">:</span> <span class="dv">40</span><span class="op">,</span></span>
+<span id="cb3-122"><a href=""></a>  <span class="dt">marginBottom</span><span class="op">:</span> <span class="dv">48</span><span class="op">,</span></span>
+<span id="cb3-123"><a href=""></a>  <span class="dt">style</span><span class="op">:</span> { <span class="dt">fontFamily</span><span class="op">:</span> font<span class="op">,</span> <span class="dt">fontSize</span><span class="op">:</span> <span class="st">"17px"</span><span class="op">,</span> <span class="dt">color</span><span class="op">:</span> ink }<span class="op">,</span></span>
+<span id="cb3-124"><a href=""></a>  <span class="dt">ariaLabel</span><span class="op">:</span> <span class="st">"Петгодишна преживяемост на новите фирми"</span><span class="op">,</span></span>
+<span id="cb3-125"><a href=""></a>  <span class="dt">x</span><span class="op">:</span> { <span class="dt">domain</span><span class="op">:</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">100</span>]<span class="op">,</span> <span class="dt">ticks</span><span class="op">:</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">25</span><span class="op">,</span> <span class="dv">50</span><span class="op">,</span> <span class="dv">75</span><span class="op">,</span> <span class="dv">100</span>]<span class="op">,</span> <span class="dt">tickFormat</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> <span class="vs">`</span><span class="sc">${</span>d<span class="sc">}</span><span class="vs">%`</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="vs">`живи след 5 години (фирми, създадени през </span><span class="sc">${</span>survival<span class="op">.</span><span class="at">year</span> <span class="op">-</span> <span class="dv">5</span><span class="sc">}</span><span class="vs"> г.)`</span> }<span class="op">,</span></span>
+<span id="cb3-126"><a href=""></a>  <span class="dt">y</span><span class="op">:</span> { <span class="dt">label</span><span class="op">:</span> <span class="kw">null</span><span class="op">,</span> <span class="dt">domain</span><span class="op">:</span> survival<span class="op">.</span><span class="at">rows</span><span class="op">.</span><span class="fu">map</span>((d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">label</span>)<span class="op">,</span> <span class="dt">tickSize</span><span class="op">:</span> <span class="dv">0</span> }<span class="op">,</span></span>
+<span id="cb3-127"><a href=""></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb3-128"><a href=""></a>    Plot<span class="op">.</span><span class="fu">barX</span>(survival<span class="op">.</span><span class="at">rows</span><span class="op">,</span> { <span class="dt">x</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"label"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> (d<span class="op">.</span><span class="at">geo</span> <span class="op">===</span> <span class="st">"BG"</span> <span class="op">?</span> <span class="st">"#444"</span> <span class="op">:</span> <span class="st">"#aaa"</span>)<span class="op">,</span> <span class="dt">insetTop</span><span class="op">:</span> <span class="dv">8</span><span class="op">,</span> <span class="dt">insetBottom</span><span class="op">:</span> <span class="dv">8</span> })<span class="op">,</span></span>
+<span id="cb3-129"><a href=""></a>    Plot<span class="op">.</span><span class="fu">text</span>(survival<span class="op">.</span><span class="at">rows</span><span class="op">,</span> { <span class="dt">x</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"label"</span><span class="op">,</span> <span class="dt">text</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> <span class="fu">pct</span>(d<span class="op">.</span><span class="at">value</span> <span class="op">/</span> <span class="dv">100</span>)<span class="op">,</span> <span class="dt">dx</span><span class="op">:</span> <span class="dv">8</span><span class="op">,</span> <span class="dt">textAnchor</span><span class="op">:</span> <span class="st">"start"</span><span class="op">,</span> <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">19</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> ink })<span class="op">,</span></span>
+<span id="cb3-130"><a href=""></a>    Plot<span class="op">.</span><span class="fu">ruleX</span>([<span class="dv">0</span>]<span class="op">,</span> { <span class="dt">stroke</span><span class="op">:</span> ink })<span class="op">,</span></span>
+<span id="cb3-131"><a href=""></a>    <span class="bu">Number</span><span class="op">.</span><span class="fu">isFinite</span>(guess) <span class="op">?</span> Plot<span class="op">.</span><span class="fu">ruleX</span>([guess]<span class="op">,</span> { <span class="dt">stroke</span><span class="op">:</span> ink<span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="fl">2.5</span><span class="op">,</span> <span class="dt">strokeDasharray</span><span class="op">:</span> <span class="st">"7 5"</span> }) <span class="op">:</span> <span class="kw">null</span><span class="op">,</span></span>
+<span id="cb3-132"><a href=""></a>    <span class="bu">Number</span><span class="op">.</span><span class="fu">isFinite</span>(guess) <span class="op">?</span> Plot<span class="op">.</span><span class="fu">text</span>([guess]<span class="op">,</span> { <span class="dt">x</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d<span class="op">,</span> <span class="dt">frameAnchor</span><span class="op">:</span> <span class="st">"top"</span><span class="op">,</span> <span class="dt">dy</span><span class="op">:</span> <span class="op">-</span><span class="dv">24</span><span class="op">,</span> <span class="dt">text</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> <span class="vs">`Вашата прогноза: </span><span class="sc">${</span><span class="fu">num</span>(d)<span class="sc">}</span><span class="vs">%`</span><span class="op">,</span> <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">17</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> ink }) <span class="op">:</span> <span class="kw">null</span><span class="op">,</span></span>
+<span id="cb3-133"><a href=""></a>  ]<span class="op">,</span></span>
+<span id="cb3-134"><a href=""></a>})</span></code></pre></div><button title="Копирай в клипборда" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-3" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div><div class="column fragment" style="width:48%;">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb4" data-startfrom="140" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 139;"><span id="cb4-140"><a href=""></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb4-141"><a href=""></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">500</span><span class="op">,</span></span>
+<span id="cb4-142"><a href=""></a>  <span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span></span>
+<span id="cb4-143"><a href=""></a>  <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">44</span><span class="op">,</span></span>
+<span id="cb4-144"><a href=""></a>  <span class="dt">marginRight</span><span class="op">:</span> <span class="dv">100</span><span class="op">,</span></span>
+<span id="cb4-145"><a href=""></a>  <span class="dt">marginTop</span><span class="op">:</span> <span class="dv">42</span><span class="op">,</span></span>
+<span id="cb4-146"><a href=""></a>  <span class="dt">style</span><span class="op">:</span> { <span class="dt">fontFamily</span><span class="op">:</span> font<span class="op">,</span> <span class="dt">fontSize</span><span class="op">:</span> <span class="st">"15px"</span><span class="op">,</span> <span class="dt">color</span><span class="op">:</span> ink }<span class="op">,</span></span>
+<span id="cb4-147"><a href=""></a>  <span class="dt">ariaLabel</span><span class="op">:</span> <span class="st">"Нови плюс закрити фирми, % от активните, България и ЕС-27"</span><span class="op">,</span></span>
+<span id="cb4-148"><a href=""></a>  <span class="dt">x</span><span class="op">:</span> { <span class="dt">label</span><span class="op">:</span> <span class="kw">null</span><span class="op">,</span> <span class="dt">tickFormat</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> <span class="bu">String</span>(d)<span class="op">,</span> <span class="dt">ticks</span><span class="op">:</span> [<span class="dv">2010</span><span class="op">,</span> <span class="dv">2015</span><span class="op">,</span> <span class="dv">2020</span><span class="op">,</span> <span class="dv">2024</span>] }<span class="op">,</span></span>
+<span id="cb4-149"><a href=""></a>  <span class="dt">y</span><span class="op">:</span> { <span class="dt">domain</span><span class="op">:</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">30</span>]<span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"нови + закрити фирми, % от активните"</span><span class="op">,</span> <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span> }<span class="op">,</span></span>
+<span id="cb4-150"><a href=""></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb4-151"><a href=""></a>    Plot<span class="op">.</span><span class="fu">ruleX</span>([<span class="fl">2020.5</span>]<span class="op">,</span> { <span class="dt">stroke</span><span class="op">:</span> <span class="st">"#999"</span><span class="op">,</span> <span class="dt">strokeDasharray</span><span class="op">:</span> <span class="st">"4 4"</span> })<span class="op">,</span></span>
+<span id="cb4-152"><a href=""></a>    Plot<span class="op">.</span><span class="fu">text</span>([<span class="fl">2020.5</span>]<span class="op">,</span> { <span class="dt">x</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d<span class="op">,</span> <span class="dt">frameAnchor</span><span class="op">:</span> <span class="st">"top"</span><span class="op">,</span> <span class="dt">dy</span><span class="op">:</span> <span class="op">-</span><span class="dv">14</span><span class="op">,</span> <span class="dt">text</span><span class="op">:</span> () <span class="kw">=&gt;</span> <span class="st">"нова методология"</span><span class="op">,</span> <span class="dt">textAnchor</span><span class="op">:</span> <span class="st">"start"</span><span class="op">,</span> <span class="dt">dx</span><span class="op">:</span> <span class="op">-</span><span class="dv">4</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"#666"</span><span class="op">,</span> <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">13</span> })<span class="op">,</span></span>
+<span id="cb4-153"><a href=""></a>    Plot<span class="op">.</span><span class="fu">line</span>(churn<span class="op">,</span> { <span class="dt">x</span><span class="op">:</span> <span class="st">"year"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span> <span class="dt">z</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">geo</span> <span class="op">+</span> d<span class="op">.</span><span class="at">series</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> (d<span class="op">.</span><span class="at">geo</span> <span class="op">===</span> <span class="st">"BG"</span> <span class="op">?</span> ink <span class="op">:</span> <span class="st">"#999"</span>)<span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="fl">2.5</span> })<span class="op">,</span></span>
+<span id="cb4-154"><a href=""></a>    Plot<span class="op">.</span><span class="fu">dot</span>(churn<span class="op">,</span> { <span class="dt">x</span><span class="op">:</span> <span class="st">"year"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> (d<span class="op">.</span><span class="at">geo</span> <span class="op">===</span> <span class="st">"BG"</span> <span class="op">?</span> ink <span class="op">:</span> <span class="st">"#999"</span>)<span class="op">,</span> <span class="dt">r</span><span class="op">:</span> <span class="dv">3</span> })<span class="op">,</span></span>
+<span id="cb4-155"><a href=""></a>    Plot<span class="op">.</span><span class="fu">text</span>(churnEnds<span class="op">,</span> { <span class="dt">x</span><span class="op">:</span> <span class="st">"year"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span> <span class="dt">text</span><span class="op">:</span> <span class="st">"label"</span><span class="op">,</span> <span class="dt">dx</span><span class="op">:</span> <span class="dv">8</span><span class="op">,</span> <span class="dt">textAnchor</span><span class="op">:</span> <span class="st">"start"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> (d<span class="op">.</span><span class="at">geo</span> <span class="op">===</span> <span class="st">"BG"</span> <span class="op">?</span> ink <span class="op">:</span> <span class="st">"#666"</span>) })<span class="op">,</span></span>
+<span id="cb4-156"><a href=""></a>  ]<span class="op">,</span></span>
+<span id="cb4-157"><a href=""></a>})</span></code></pre></div><button title="Копирай в клипборда" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-4" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div></div>
+<p>Около 4 от 10 нови фирми в България оцеляват пет години, близо до средното за ЕС.</p>
+<div class="cell hidden">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb5" data-startfrom="168" data-source-offset="-75"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 167;"><span id="cb5-168"><a href=""></a>Plot <span class="op">=</span> <span class="im">import</span>(<span class="st">"https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6.17/+esm"</span>)</span>
+<span id="cb5-169"><a href=""></a><span class="im">import</span> { criticalLoss<span class="op">,</span> profitChange<span class="op">,</span> lossVerdict } <span class="im">from</span> <span class="st">"./lib/models.js"</span></span>
+<span id="cb5-170"><a href=""></a><span class="im">import</span> { pct<span class="op">,</span> num<span class="op">,</span> eur } <span class="im">from</span> <span class="st">"./lib/format.js"</span></span>
+<span id="cb5-171"><a href=""></a>ink <span class="op">=</span> <span class="st">"#222"</span></span>
+<span id="cb5-172"><a href=""></a>font <span class="op">=</span> <span class="st">"Helvetica Neue, Helvetica, Arial, sans-serif"</span></span>
+<span id="cb5-173"><a href=""></a>bd <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"data/eurostat_bd.csv"</span>)<span class="op">.</span><span class="fu">csv</span>({ <span class="dt">typed</span><span class="op">:</span> <span class="kw">true</span> })</span>
+<span id="cb5-174"><a href=""></a>churn <span class="op">=</span> bd<span class="op">.</span><span class="fu">filter</span>((d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">indicator</span> <span class="op">===</span> <span class="st">"churn"</span> <span class="op">&amp;&amp;</span> d<span class="op">.</span><span class="at">year</span> <span class="op">&gt;=</span> <span class="dv">2008</span>)</span>
+<span id="cb5-175"><a href=""></a>churnEnds <span class="op">=</span> [<span class="st">"BG"</span><span class="op">,</span> <span class="st">"EU27_2020"</span>]<span class="op">.</span><span class="fu">map</span>((g) <span class="kw">=&gt;</span> {</span>
+<span id="cb5-176"><a href=""></a>  <span class="kw">const</span> last <span class="op">=</span> d3<span class="op">.</span><span class="fu">greatest</span>(churn<span class="op">.</span><span class="fu">filter</span>((d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">geo</span> <span class="op">===</span> g)<span class="op">,</span> (d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">year</span>)<span class="op">;</span></span>
+<span id="cb5-177"><a href=""></a>  <span class="cf">return</span> { <span class="op">...</span>last<span class="op">,</span> <span class="dt">label</span><span class="op">:</span> g <span class="op">===</span> <span class="st">"BG"</span> <span class="op">?</span> <span class="st">"България"</span> <span class="op">:</span> <span class="st">"ЕС-27"</span> }<span class="op">;</span></span>
+<span id="cb5-178"><a href=""></a>})</span></code></pre></div><button title="Копирай в клипборда" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-5-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-5-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-5-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-5-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-5-5" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-5-6" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-5-7" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-5-8" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
 
 <aside><div>
 <p>Източник: Eurostat, bd_9bd_sz_cl_r2 (до 2020 г.) и bd_size (от 2021 г.), бизнес икономика. От 2021 г. методологията е нова и данните преди и след това не са напълно съпоставими.</p>
@@ -403,11 +614,119 @@
 </section>
 <section id="s20" class="slide level2">
 <h2>Критична загуба</h2>
-<p>Критичната загуба е делът клиенти, при чиято загуба повишението на цената престава да е изгодно:</p>
+<div class="columns">
+<div class="column" style="width:46%;">
 <p>КЗ = <em>X</em> / (<em>X</em> + <em>M</em>)</p>
-<p><em>X</em> е повишението на цената, а <em>M</em> е маржът: цената минус пределния разход, като дял от цената.</p>
-<p>Пример: капучино в кафене до НБУ поскъпва от 3,00 € на 3,30 € (<em>X</em> = 10%) при марж <em>M</em> = 40%. Тогава КЗ = 10 / (10 + 40) = 20%. Ако очакваме да загубим 15% от клиентите, повишението е изгодно; при 25% не е.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb6" data-startfrom="235" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 234;"><span id="cb6-235"><a href=""></a>viewof X <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">1</span><span class="op">,</span> <span class="dv">20</span>]<span class="op">,</span> { <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Повишение на цената X, %"</span> })</span></code></pre></div><button title="Копирай в клипборда" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-6" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb7" data-startfrom="239" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 238;"><span id="cb7-239"><a href=""></a>viewof M <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">5</span><span class="op">,</span> <span class="dv">80</span>]<span class="op">,</span> { <span class="dt">step</span><span class="op">:</span> <span class="dv">5</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="dv">40</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Марж M, %"</span> })</span></code></pre></div><button title="Копирай в клипборда" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-7" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb8" data-startfrom="243" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 242;"><span id="cb8-243"><a href=""></a>viewof L <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">60</span>]<span class="op">,</span> { <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="dv">15</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Очаквана загуба на клиенти L, %"</span> })</span></code></pre></div><button title="Копирай в клипборда" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-8" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb9" data-startfrom="247" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 246;"><span id="cb9-247"><a href=""></a><span class="fu">html</span><span class="vs">`&lt;p class="readout"&gt;Критична загуба: &lt;strong&gt;</span><span class="sc">${</span><span class="fu">pct</span>(cl)<span class="sc">}</span><span class="vs">&lt;/strong&gt;&lt;br&gt;Промяна на печалбата: &lt;strong&gt;</span><span class="sc">${</span><span class="fu">pct</span>(dProfit<span class="op">,</span> { <span class="dt">max</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span> <span class="dt">sign</span><span class="op">:</span> <span class="kw">true</span> })<span class="sc">}</span><span class="vs">&lt;/strong&gt;&lt;/p&gt;`</span></span></code></pre></div><button title="Копирай в клипборда" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-9" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div><div class="column" style="width:54%;">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb10" data-startfrom="253" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 252;"><span id="cb10-253"><a href=""></a><span class="fu">html</span><span class="vs">`&lt;p class="readout"&gt;Капучино в кафене до НБУ: от </span><span class="sc">${</span><span class="fu">eur</span>(<span class="dv">3</span>)<span class="sc">}</span><span class="vs"> на &lt;strong&gt;</span><span class="sc">${</span><span class="fu">eur</span>(<span class="dv">3</span> <span class="op">*</span> (<span class="dv">1</span> <span class="op">+</span> X <span class="op">/</span> <span class="dv">100</span>))<span class="sc">}</span><span class="vs">&lt;/strong&gt;&lt;/p&gt;`</span></span></code></pre></div><button title="Копирай в клипборда" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-10" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb11" data-startfrom="257" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 256;"><span id="cb11-257"><a href=""></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb11-258"><a href=""></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">560</span><span class="op">,</span></span>
+<span id="cb11-259"><a href=""></a>  <span class="dt">height</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb11-260"><a href=""></a>  <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">16</span><span class="op">,</span></span>
+<span id="cb11-261"><a href=""></a>  <span class="dt">marginRight</span><span class="op">:</span> <span class="dv">28</span><span class="op">,</span></span>
+<span id="cb11-262"><a href=""></a>  <span class="dt">marginTop</span><span class="op">:</span> <span class="dv">52</span><span class="op">,</span></span>
+<span id="cb11-263"><a href=""></a>  <span class="dt">marginBottom</span><span class="op">:</span> <span class="dv">52</span><span class="op">,</span></span>
+<span id="cb11-264"><a href=""></a>  <span class="dt">style</span><span class="op">:</span> { <span class="dt">fontFamily</span><span class="op">:</span> font<span class="op">,</span> <span class="dt">fontSize</span><span class="op">:</span> <span class="st">"18px"</span><span class="op">,</span> <span class="dt">color</span><span class="op">:</span> ink }<span class="op">,</span></span>
+<span id="cb11-265"><a href=""></a>  <span class="dt">ariaLabel</span><span class="op">:</span> <span class="st">"Очаквана загуба на клиенти спрямо критичната загуба"</span><span class="op">,</span></span>
+<span id="cb11-266"><a href=""></a>  <span class="dt">x</span><span class="op">:</span> { <span class="dt">domain</span><span class="op">:</span> [<span class="dv">0</span><span class="op">,</span> <span class="fl">0.6</span>]<span class="op">,</span> <span class="dt">ticks</span><span class="op">:</span> [<span class="dv">0</span><span class="op">,</span> <span class="fl">0.1</span><span class="op">,</span> <span class="fl">0.2</span><span class="op">,</span> <span class="fl">0.3</span><span class="op">,</span> <span class="fl">0.4</span><span class="op">,</span> <span class="fl">0.5</span><span class="op">,</span> <span class="fl">0.6</span>]<span class="op">,</span> <span class="dt">tickFormat</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> <span class="fu">pct</span>(d<span class="op">,</span> { <span class="dt">min</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">max</span><span class="op">:</span> <span class="dv">0</span> })<span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"клиенти, които си тръгват"</span> }<span class="op">,</span></span>
+<span id="cb11-267"><a href=""></a>  <span class="dt">y</span><span class="op">:</span> { <span class="dt">axis</span><span class="op">:</span> <span class="kw">null</span><span class="op">,</span> <span class="dt">domain</span><span class="op">:</span> [<span class="st">"L"</span>] }<span class="op">,</span></span>
+<span id="cb11-268"><a href=""></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb11-269"><a href=""></a>    Plot<span class="op">.</span><span class="fu">barX</span>([L <span class="op">/</span> <span class="dv">100</span>]<span class="op">,</span> { <span class="dt">x</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> () <span class="kw">=&gt;</span> <span class="st">"L"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"#999"</span><span class="op">,</span> <span class="dt">insetTop</span><span class="op">:</span> <span class="dv">6</span><span class="op">,</span> <span class="dt">insetBottom</span><span class="op">:</span> <span class="dv">6</span> })<span class="op">,</span></span>
+<span id="cb11-270"><a href=""></a>    Plot<span class="op">.</span><span class="fu">ruleX</span>([cl]<span class="op">,</span> { <span class="dt">stroke</span><span class="op">:</span> ink<span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">3</span> })<span class="op">,</span></span>
+<span id="cb11-271"><a href=""></a>    Plot<span class="op">.</span><span class="fu">text</span>([cl]<span class="op">,</span> { <span class="dt">x</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d<span class="op">,</span> <span class="dt">frameAnchor</span><span class="op">:</span> <span class="st">"top"</span><span class="op">,</span> <span class="dt">dy</span><span class="op">:</span> <span class="op">-</span><span class="dv">30</span><span class="op">,</span> <span class="dt">text</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> <span class="vs">`КЗ = </span><span class="sc">${</span><span class="fu">pct</span>(d)<span class="sc">}</span><span class="vs">`</span><span class="op">,</span> <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">17</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> ink })<span class="op">,</span></span>
+<span id="cb11-272"><a href=""></a>    Plot<span class="op">.</span><span class="fu">ruleX</span>([<span class="dv">0</span>]<span class="op">,</span> { <span class="dt">stroke</span><span class="op">:</span> ink })<span class="op">,</span></span>
+<span id="cb11-273"><a href=""></a>  ]<span class="op">,</span></span>
+<span id="cb11-274"><a href=""></a>})</span></code></pre></div><button title="Копирай в клипборда" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-11" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb12" data-startfrom="278" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 277;"><span id="cb12-278"><a href=""></a><span class="fu">html</span><span class="vs">`&lt;p class="readout"&gt;&lt;strong&gt;</span><span class="sc">${</span>clText<span class="sc">}</span><span class="vs">&lt;/strong&gt;&lt;/p&gt;`</span></span></code></pre></div><button title="Копирай в клипборда" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-12" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div></div>
 <p>Колкото по-голяма е разликата между приходи и разходи, толкова по-малко клиенти можеш да си позволиш да загубиш.</p>
+<div class="cell hidden">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb13" data-startfrom="288" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 287;"><span id="cb13-288"><a href=""></a>cl <span class="op">=</span> <span class="fu">criticalLoss</span>(X <span class="op">/</span> <span class="dv">100</span><span class="op">,</span> M <span class="op">/</span> <span class="dv">100</span>)</span>
+<span id="cb13-289"><a href=""></a>dProfit <span class="op">=</span> <span class="fu">profitChange</span>(X <span class="op">/</span> <span class="dv">100</span><span class="op">,</span> M <span class="op">/</span> <span class="dv">100</span><span class="op">,</span> L <span class="op">/</span> <span class="dv">100</span>)</span>
+<span id="cb13-290"><a href=""></a>clState <span class="op">=</span> <span class="fu">lossVerdict</span>(L <span class="op">/</span> <span class="dv">100</span><span class="op">,</span> cl)</span>
+<span id="cb13-291"><a href=""></a>clText <span class="op">=</span> ({ <span class="dt">profit</span><span class="op">:</span> <span class="st">"Повишението е изгодно"</span><span class="op">,</span> <span class="dt">loss</span><span class="op">:</span> <span class="st">"Неизгодно: клиентите имат заместители, пазарът е по-широк"</span><span class="op">,</span> <span class="dt">edge</span><span class="op">:</span> <span class="st">"На ръба"</span> })[clState]</span></code></pre></div><button title="Копирай в клипборда" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-13-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-13-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-13-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-13-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="s21" class="slide level2">
 <h2>FTC срещу Meta (2025)</h2>
@@ -481,14 +800,35 @@
 <p>Вие сте заварен играч. Новият вече е влязъл. Борите ли се за запазване на пазарния дял или допускате навлизане на нов участник?</p>
 <div class="columns">
 <div class="column" style="width:62%;">
-<p><img data-src="img/entry-game.svg" alt="Дърво на играта. Предприемачът избира дали да влезе. Ако не влезе, печалбите са 0 за него и 10 за заварения. Ако влезе, завареният избира: борба дава −1 и 2, допускане дава 5 и 6."></p>
+<svg viewbox="0 0 920 430" style="width:100%;height:auto" role="img" font-family="&quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif" fill="#222"><title>Играта на навлизане: предприемачът избира дали да влезе; ако влезе, завареният избира борба или допускане. Печалби: не влиза (0, 10), бори се (−1, 2), допуска (5, 6).</title>
+<g class="fragment prune" data-fragment-index="2"><line x1="240" y1="200" x2="510" y2="70" stroke="#222" stroke-width="2"></line><text x="370.7" y="126.0" font-size="30" text-anchor="middle" transform="rotate(-25.7 370.7 126.0)">не влиза</text><circle cx="510" cy="70" r="4" fill="#222"></circle><text x="526" y="80" font-size="30" text-anchor="start">(0, 10)</text></g>
+<g class="fragment" data-fragment-index="2"><path d="M362.2 156.7L350.0 131.5M373.0 151.5L360.8 126.3" stroke="#222" stroke-width="3" stroke-linecap="round"></path></g>
+<g class="fragment bold" data-fragment-index="2"><line x1="240" y1="200" x2="510" y2="310" stroke="#222" stroke-width="2"></line></g>
+<text x="362.7" y="285.1" font-size="30" text-anchor="middle" transform="rotate(22.2 362.7 285.1)">влиза</text>
+<g class="fragment prune" data-fragment-index="1"><line x1="510" y1="310" x2="770" y2="230" stroke="#222" stroke-width="2"></line><text x="637.1" y="260.4" font-size="30" text-anchor="middle" transform="rotate(-17.1 637.1 260.4)">бори се</text><circle cx="770" cy="230" r="4" fill="#222"></circle><text x="786" y="240" font-size="30" text-anchor="start">(−1, 2)</text></g>
+<g class="fragment" data-fragment-index="1"><path d="M625.4 289.1L617.1 262.4M636.9 285.6L628.6 258.9" stroke="#222" stroke-width="3" stroke-linecap="round"></path></g>
+<g class="fragment bold" data-fragment-index="1"><line x1="510" y1="310" x2="770" y2="390" stroke="#222" stroke-width="2"></line></g>
+<text x="630.4" y="381.1" font-size="30" text-anchor="middle" transform="rotate(17.1 630.4 381.1)">допуска</text>
+<circle cx="770" cy="390" r="4" fill="#222"></circle>
+<text x="786" y="400" font-size="30" text-anchor="start">(5, 6)</text>
+<circle cx="240" cy="200" r="6" fill="#222"></circle>
+<circle cx="510" cy="310" r="6" fill="#222"></circle>
+<text x="226" y="210" font-size="30" text-anchor="end">Предприемач</text>
+<text x="496" y="354" font-size="30" text-anchor="end">Заварен</text>
+</svg>
 </div><div class="column" style="width:38%;">
 <p>Печалби: (предприемач, заварен).</p>
+<div class="fragment" data-fragment-index="1">
 <ol type="1">
-<li class="fragment">Завареният сравнява 2 и 6 и допуска.</li>
-<li class="fragment">Предприемачът сравнява 0 и 5 и влиза.</li>
+<li>Завареният сравнява 2 и 6 и допуска.</li>
 </ol>
-<div class="fragment">
+</div>
+<div class="fragment" data-fragment-index="2">
+<ol start="2" type="1">
+<li>Предприемачът сравнява 0 и 5 и влиза.</li>
+</ol>
+</div>
+<div class="fragment" data-fragment-index="3">
 <p>Заплахата не е достоверна.</p>
 </div>
 </div></div>
@@ -498,15 +838,45 @@
 <p>Преди новия играч завареният може да построи допълнителен капацитет на цена 3. Платен веднъж, той прави борбата евтина; ако стои неизползван, е чист разход.</p>
 <div class="columns">
 <div class="column" style="width:62%;">
-<p><img data-src="img/commitment-game.svg" alt="Дърво на играта с ангажимент. Завареният първо избира дали да построи капацитет за 3. Без капацитет изходът е като на предишния слайд: 5 и 6. С капацитет: ако новият не влезе, 0 и 7; ако влезе и завареният се бори, −1 и 5; ако допусне, 5 и 3."></p>
+<svg viewbox="0 0 1040 570" style="width:100%;height:auto" role="img" font-family="&quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif" fill="#222"><title>Играта с ангажимент: завареният първо избира дали да построи капацитет за 3. Без капацитет изходът е като на предишния слайд, (5, 6). С капацитет: не влиза (0, 7), влиза и завареният се бори (−1, 5), влиза и завареният допуска (5, 3).</title>
+<g class="fragment prune" data-fragment-index="3"><line x1="150" y1="250" x2="400" y2="90" stroke="#222" stroke-width="2"></line><text x="269.6" y="161.6" font-size="30" text-anchor="middle" transform="rotate(-32.6 269.6 161.6)">без капацитет</text><circle cx="400" cy="90" r="4" fill="#222"></circle><text x="416" y="100" font-size="30" text-anchor="start">(5, 6)</text><text x="416" y="136" font-size="24" text-anchor="start">както на предишния слайд</text></g>
+<g class="fragment" data-fragment-index="3"><path d="M265.0 193.0L249.9 169.4M275.1 186.6L260.0 163.0" stroke="#222" stroke-width="3" stroke-linecap="round"></path></g>
+<g class="fragment bold" data-fragment-index="3"><line x1="150" y1="250" x2="400" y2="360" stroke="#222" stroke-width="2"></line></g>
+<text x="279.0" y="295.8" font-size="30" text-anchor="middle" transform="rotate(23.7 279.0 295.8)">капацитет (−3)</text>
+<g class="fragment prune" data-fragment-index="2"><line x1="400" y1="360" x2="650" y2="470" stroke="#222" stroke-width="2"></line><text x="511.9" y="444.7" font-size="30" text-anchor="middle" transform="rotate(23.7 511.9 444.7)">влиза</text><g class="fragment prune" data-fragment-index="1"><line x1="650" y1="470" x2="900" y2="540" stroke="#222" stroke-width="2"></line><text x="766.2" y="536.3" font-size="30" text-anchor="middle" transform="rotate(15.6 766.2 536.3)">допуска</text><circle cx="900" cy="540" r="4" fill="#222"></circle><text x="916" y="550" font-size="30" text-anchor="start">(5, 3)</text></g><g class="fragment" data-fragment-index="1"><path d="M752.9 513.4L760.5 486.4M764.5 516.6L772.1 489.6" stroke="#222" stroke-width="3" stroke-linecap="round"></path></g><g class="fragment bold" data-fragment-index="1"><line x1="650" y1="470" x2="900" y2="410" stroke="#222" stroke-width="2"></line></g><text x="772.7" y="430.3" font-size="30" text-anchor="middle" transform="rotate(-13.5 772.7 430.3)">бори се</text><circle cx="900" cy="410" r="4" fill="#222"></circle><text x="916" y="420" font-size="30" text-anchor="start">(−1, 5)</text><circle cx="650" cy="470" r="6" fill="#222"></circle><text x="636" y="514" font-size="30" text-anchor="end">Заварен</text></g>
+<g class="fragment" data-fragment-index="2"><path d="M501.4 419.9L512.6 394.3M512.4 424.7L523.6 399.1" stroke="#222" stroke-width="3" stroke-linecap="round"></path></g>
+<g class="fragment bold" data-fragment-index="2"><line x1="400" y1="360" x2="650" y2="280" stroke="#222" stroke-width="2"></line></g>
+<text x="522.0" y="310.5" font-size="30" text-anchor="middle" transform="rotate(-17.7 522.0 310.5)">не влиза</text>
+<circle cx="650" cy="280" r="4" fill="#222"></circle>
+<text x="666" y="290" font-size="30" text-anchor="start">(0, 7)</text>
+<g class="fragment" data-fragment-index="4"><rect x="904" y="386" width="122" height="46" rx="8" fill="none" stroke="#222" stroke-width="2.5" stroke-dasharray="8 6"></rect></g>
+<circle cx="150" cy="250" r="6" fill="#222"></circle>
+<circle cx="400" cy="360" r="6" fill="#222"></circle>
+<text x="136" y="260" font-size="30" text-anchor="end">Заварен</text>
+<text x="386" y="404" font-size="30" text-anchor="end">Предприемач</text>
+</svg>
 </div><div class="column" style="width:38%;">
+<div class="fragment" data-fragment-index="1">
 <ol type="1">
-<li class="fragment">С капацитет борбата е по-изгодна (5 &gt; 3): заплахата е достоверна.</li>
-<li class="fragment">Новият остава вън (0 &gt; −1).</li>
-<li class="fragment">Завареният печели 7 вместо 6, затова строи.</li>
-<li class="fragment">Таен капацитет: новият влиза, завареният се бори и получава 5, по-малко, отколкото без капацитет.</li>
+<li>С капацитет борбата е по-изгодна (5 &gt; 3): заплахата е достоверна.</li>
 </ol>
-<div class="fragment">
+</div>
+<div class="fragment" data-fragment-index="2">
+<ol start="2" type="1">
+<li>Новият остава вън (0 &gt; −1).</li>
+</ol>
+</div>
+<div class="fragment" data-fragment-index="3">
+<ol start="3" type="1">
+<li>Завареният печели 7 вместо 6, затова строи.</li>
+</ol>
+</div>
+<div class="fragment" data-fragment-index="4">
+<ol start="4" type="1">
+<li>Таен капацитет: новият влиза, завареният се бори и получава 5, по-малко, отколкото без капацитет.</li>
+</ol>
+</div>
+<div class="fragment" data-fragment-index="5">
 <p>Ангажиментът работи само ако е видим и необратим (Dixit 1980).</p>
 </div>
 </div></div>
@@ -691,6 +1061,7 @@
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
+'scrollActivationWidth': 0,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'smaller': false,
  
@@ -870,6 +1241,17 @@
           RevealZoom
         ]
       });
+    </script>
+    <script type="ojs-module-contents">
+    eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBndWVzc1RleHQgPSBJbnB1dHMudGV4dCh7IGxhYmVsOiBcItCS0LDRiNCw0YLQsCDQv9GA0L7Qs9C90L7Qt9CwLCAlXCIsIHBsYWNlaG9sZGVyOiBcItC80LXQtNC40LDQvdCw0YLQsCDQvdCwINC60LvQsNGB0LBcIiwgd2lkdGg6IDE0MCB9KVxuZ3Vlc3MgPSB7IGNvbnN0IHYgPSBwYXJzZUZsb2F0KFN0cmluZyhndWVzc1RleHQpLnJlcGxhY2UoXCIsXCIsIFwiLlwiKSk7IHJldHVybiB2ID49IDAgJiYgdiA8PSAxMDAgPyB2IDogTmFOOyB9XG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJzdXJ2aXZhbCA9IHtcbiAgY29uc3Qgcm93cyA9IGJkLmZpbHRlcigoZCkgPT4gZC5pbmRpY2F0b3IgPT09IFwic3Vydml2YWxfNXlcIik7XG4gIGNvbnN0IHllYXJzID0gZDMuaW50ZXJzZWN0aW9uKC4uLltcIkJHXCIsIFwiRVUyN18yMDIwXCJdLm1hcCgoZykgPT4gcm93cy5maWx0ZXIoKGQpID0+IGQuZ2VvID09PSBnKS5tYXAoKGQpID0+IGQueWVhcikpKTtcbiAgY29uc3QgeWVhciA9IGQzLm1heCh5ZWFycyk7XG4gIGNvbnN0IHBpY2sgPSByb3dzLmZpbHRlcigoZCkgPT4gZC55ZWFyID09PSB5ZWFyKVxuICAgIC5tYXAoKGQpID0+ICh7IC4uLmQsIGxhYmVsOiBkLmdlbyA9PT0gXCJCR1wiID8gXCLQkdGK0LvQs9Cw0YDQuNGPXCIgOiBcItCV0KEtMjdcIiB9KSlcbiAgICAuc29ydCgoYSwgYikgPT4gKGEuZ2VvID09PSBcIkJHXCIgPyAtMSA6IDEpKTtcbiAgcmV0dXJuIHsgeWVhciwgcm93czogcGljayB9O1xufVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0zIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiUGxvdC5wbG90KHtcbiAgd2lkdGg6IDU2MCxcbiAgaGVpZ2h0OiAyNTAsXG4gIG1hcmdpbkxlZnQ6IDEwNCxcbiAgbWFyZ2luUmlnaHQ6IDU2LFxuICBtYXJnaW5Ub3A6IDQwLFxuICBtYXJnaW5Cb3R0b206IDQ4LFxuICBzdHlsZTogeyBmb250RmFtaWx5OiBmb250LCBmb250U2l6ZTogXCIxN3B4XCIsIGNvbG9yOiBpbmsgfSxcbiAgYXJpYUxhYmVsOiBcItCf0LXRgtCz0L7QtNC40YjQvdCwINC/0YDQtdC20LjQstGP0LXQvNC+0YHRgiDQvdCwINC90L7QstC40YLQtSDRhNC40YDQvNC4XCIsXG4gIHg6IHsgZG9tYWluOiBbMCwgMTAwXSwgdGlja3M6IFswLCAyNSwgNTAsIDc1LCAxMDBdLCB0aWNrRm9ybWF0OiAoZCkgPT4gYCR7ZH0lYCwgbGFiZWw6IGDQttC40LLQuCDRgdC70LXQtCA1INCz0L7QtNC40L3QuCAo0YTQuNGA0LzQuCwg0YHRitC30LTQsNC00LXQvdC4INC/0YDQtdC3ICR7c3Vydml2YWwueWVhciAtIDV9INCzLilgIH0sXG4gIHk6IHsgbGFiZWw6IG51bGwsIGRvbWFpbjogc3Vydml2YWwucm93cy5tYXAoKGQpID0+IGQubGFiZWwpLCB0aWNrU2l6ZTogMCB9LFxuICBtYXJrczogW1xuICAgIFBsb3QuYmFyWChzdXJ2aXZhbC5yb3dzLCB7IHg6IFwidmFsdWVcIiwgeTogXCJsYWJlbFwiLCBmaWxsOiAoZCkgPT4gKGQuZ2VvID09PSBcIkJHXCIgPyBcIiM0NDRcIiA6IFwiI2FhYVwiKSwgaW5zZXRUb3A6IDgsIGluc2V0Qm90dG9tOiA4IH0pLFxuICAgIFBsb3QudGV4dChzdXJ2aXZhbC5yb3dzLCB7IHg6IFwidmFsdWVcIiwgeTogXCJsYWJlbFwiLCB0ZXh0OiAoZCkgPT4gcGN0KGQudmFsdWUgLyAxMDApLCBkeDogOCwgdGV4dEFuY2hvcjogXCJzdGFydFwiLCBmb250U2l6ZTogMTksIGZpbGw6IGluayB9KSxcbiAgICBQbG90LnJ1bGVYKFswXSwgeyBzdHJva2U6IGluayB9KSxcbiAgICBOdW1iZXIuaXNGaW5pdGUoZ3Vlc3MpID8gUGxvdC5ydWxlWChbZ3Vlc3NdLCB7IHN0cm9rZTogaW5rLCBzdHJva2VXaWR0aDogMi41LCBzdHJva2VEYXNoYXJyYXk6IFwiNyA1XCIgfSkgOiBudWxsLFxuICAgIE51bWJlci5pc0Zpbml0ZShndWVzcykgPyBQbG90LnRleHQoW2d1ZXNzXSwgeyB4OiAoZCkgPT4gZCwgZnJhbWVBbmNob3I6IFwidG9wXCIsIGR5OiAtMjQsIHRleHQ6IChkKSA9PiBg0JLQsNGI0LDRgtCwINC/0YDQvtCz0L3QvtC30LA6ICR7bnVtKGQpfSVgLCBmb250U2l6ZTogMTcsIGZpbGw6IGluayB9KSA6IG51bGwsXG4gIF0sXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC00IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiUGxvdC5wbG90KHtcbiAgd2lkdGg6IDUwMCxcbiAgaGVpZ2h0OiAzMDAsXG4gIG1hcmdpbkxlZnQ6IDQ0LFxuICBtYXJnaW5SaWdodDogMTAwLFxuICBtYXJnaW5Ub3A6IDQyLFxuICBzdHlsZTogeyBmb250RmFtaWx5OiBmb250LCBmb250U2l6ZTogXCIxNXB4XCIsIGNvbG9yOiBpbmsgfSxcbiAgYXJpYUxhYmVsOiBcItCd0L7QstC4INC/0LvRjtGBINC30LDQutGA0LjRgtC4INGE0LjRgNC80LgsICUg0L7RgiDQsNC60YLQuNCy0L3QuNGC0LUsINCR0YrQu9Cz0LDRgNC40Y8g0Lgg0JXQoS0yN1wiLFxuICB4OiB7IGxhYmVsOiBudWxsLCB0aWNrRm9ybWF0OiAoZCkgPT4gU3RyaW5nKGQpLCB0aWNrczogWzIwMTAsIDIwMTUsIDIwMjAsIDIwMjRdIH0sXG4gIHk6IHsgZG9tYWluOiBbMCwgMzBdLCBsYWJlbDogXCLQvdC+0LLQuCArINC30LDQutGA0LjRgtC4INGE0LjRgNC80LgsICUg0L7RgiDQsNC60YLQuNCy0L3QuNGC0LVcIiwgZ3JpZDogdHJ1ZSB9LFxuICBtYXJrczogW1xuICAgIFBsb3QucnVsZVgoWzIwMjAuNV0sIHsgc3Ryb2tlOiBcIiM5OTlcIiwgc3Ryb2tlRGFzaGFycmF5OiBcIjQgNFwiIH0pLFxuICAgIFBsb3QudGV4dChbMjAyMC41XSwgeyB4OiAoZCkgPT4gZCwgZnJhbWVBbmNob3I6IFwidG9wXCIsIGR5OiAtMTQsIHRleHQ6ICgpID0+IFwi0L3QvtCy0LAg0LzQtdGC0L7QtNC+0LvQvtCz0LjRj1wiLCB0ZXh0QW5jaG9yOiBcInN0YXJ0XCIsIGR4OiAtNCwgZmlsbDogXCIjNjY2XCIsIGZvbnRTaXplOiAxMyB9KSxcbiAgICBQbG90LmxpbmUoY2h1cm4sIHsgeDogXCJ5ZWFyXCIsIHk6IFwidmFsdWVcIiwgejogKGQpID0+IGQuZ2VvICsgZC5zZXJpZXMsIHN0cm9rZTogKGQpID0+IChkLmdlbyA9PT0gXCJCR1wiID8gaW5rIDogXCIjOTk5XCIpLCBzdHJva2VXaWR0aDogMi41IH0pLFxuICAgIFBsb3QuZG90KGNodXJuLCB7IHg6IFwieWVhclwiLCB5OiBcInZhbHVlXCIsIGZpbGw6IChkKSA9PiAoZC5nZW8gPT09IFwiQkdcIiA/IGluayA6IFwiIzk5OVwiKSwgcjogMyB9KSxcbiAgICBQbG90LnRleHQoY2h1cm5FbmRzLCB7IHg6IFwieWVhclwiLCB5OiBcInZhbHVlXCIsIHRleHQ6IFwibGFiZWxcIiwgZHg6IDgsIHRleHRBbmNob3I6IFwic3RhcnRcIiwgZmlsbDogKGQpID0+IChkLmdlbyA9PT0gXCJCR1wiID8gaW5rIDogXCIjNjY2XCIpIH0pLFxuICBdLFxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Ii8vIFNoYXJlZCBzZXR1cCBmb3IgdGhlIGNoYXJ0cyBvbiB0aGlzIHNsaWRlIGFuZCB0aGUgY3JpdGljYWwtbG9zcyB3aWRnZXQuXG5QbG90ID0gaW1wb3J0KFwiaHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L25wbS9Ab2JzZXJ2YWJsZWhxL3Bsb3RAMC42LjE3Lytlc21cIilcbmltcG9ydCB7IGNyaXRpY2FsTG9zcywgcHJvZml0Q2hhbmdlLCBsb3NzVmVyZGljdCB9IGZyb20gXCIuL2xpYi9tb2RlbHMuanNcIlxuaW1wb3J0IHsgcGN0LCBudW0sIGV1ciB9IGZyb20gXCIuL2xpYi9mb3JtYXQuanNcIlxuaW5rID0gXCIjMjIyXCJcbmZvbnQgPSBcIkhlbHZldGljYSBOZXVlLCBIZWx2ZXRpY2EsIEFyaWFsLCBzYW5zLXNlcmlmXCJcbmJkID0gRmlsZUF0dGFjaG1lbnQoXCJkYXRhL2V1cm9zdGF0X2JkLmNzdlwiKS5jc3YoeyB0eXBlZDogdHJ1ZSB9KVxuY2h1cm4gPSBiZC5maWx0ZXIoKGQpID0+IGQuaW5kaWNhdG9yID09PSBcImNodXJuXCIgJiYgZC55ZWFyID49IDIwMDgpXG5jaHVybkVuZHMgPSBbXCJCR1wiLCBcIkVVMjdfMjAyMFwiXS5tYXAoKGcpID0+IHtcbiAgY29uc3QgbGFzdCA9IGQzLmdyZWF0ZXN0KGNodXJuLmZpbHRlcigoZCkgPT4gZC5nZW8gPT09IGcpLCAoZCkgPT4gZC55ZWFyKTtcbiAgcmV0dXJuIHsgLi4ubGFzdCwgbGFiZWw6IGcgPT09IFwiQkdcIiA/IFwi0JHRitC70LPQsNGA0LjRj1wiIDogXCLQldChLTI3XCIgfTtcbn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTYiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ2aWV3b2YgWCA9IElucHV0cy5yYW5nZShbMSwgMjBdLCB7IHN0ZXA6IDEsIHZhbHVlOiAxMCwgbGFiZWw6IFwi0J/QvtCy0LjRiNC10L3QuNC1INC90LAg0YbQtdC90LDRgtCwIFgsICVcIiB9KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC03IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidmlld29mIE0gPSBJbnB1dHMucmFuZ2UoWzUsIDgwXSwgeyBzdGVwOiA1LCB2YWx1ZTogNDAsIGxhYmVsOiBcItCc0LDRgNC2IE0sICVcIiB9KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC04IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidmlld29mIEwgPSBJbnB1dHMucmFuZ2UoWzAsIDYwXSwgeyBzdGVwOiAxLCB2YWx1ZTogMTUsIGxhYmVsOiBcItCe0YfQsNC60LLQsNC90LAg0LfQsNCz0YPQsdCwINC90LAg0LrQu9C40LXQvdGC0LggTCwgJVwiIH0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTkiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJodG1sYDxwIGNsYXNzPVwicmVhZG91dFwiPtCa0YDQuNGC0LjRh9C90LAg0LfQsNCz0YPQsdCwOiA8c3Ryb25nPiR7cGN0KGNsKX08L3N0cm9uZz48YnI+0J/RgNC+0LzRj9C90LAg0L3QsCDQv9C10YfQsNC70LHQsNGC0LA6IDxzdHJvbmc+JHtwY3QoZFByb2ZpdCwgeyBtYXg6IDIsIHNpZ246IHRydWUgfSl9PC9zdHJvbmc+PC9wPmBcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTAiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJodG1sYDxwIGNsYXNzPVwicmVhZG91dFwiPtCa0LDQv9GD0YfQuNC90L4g0LIg0LrQsNGE0LXQvdC1INC00L4g0J3QkdCjOiDQvtGCICR7ZXVyKDMpfSDQvdCwIDxzdHJvbmc+JHtldXIoMyAqICgxICsgWCAvIDEwMCkpfTwvc3Ryb25nPjwvcD5gXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTExIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiUGxvdC5wbG90KHtcbiAgd2lkdGg6IDU2MCxcbiAgaGVpZ2h0OiAyMDAsXG4gIG1hcmdpbkxlZnQ6IDE2LFxuICBtYXJnaW5SaWdodDogMjgsXG4gIG1hcmdpblRvcDogNTIsXG4gIG1hcmdpbkJvdHRvbTogNTIsXG4gIHN0eWxlOiB7IGZvbnRGYW1pbHk6IGZvbnQsIGZvbnRTaXplOiBcIjE4cHhcIiwgY29sb3I6IGluayB9LFxuICBhcmlhTGFiZWw6IFwi0J7Rh9Cw0LrQstCw0L3QsCDQt9Cw0LPRg9Cx0LAg0L3QsCDQutC70LjQtdC90YLQuCDRgdC/0YDRj9C80L4g0LrRgNC40YLQuNGH0L3QsNGC0LAg0LfQsNCz0YPQsdCwXCIsXG4gIHg6IHsgZG9tYWluOiBbMCwgMC42XSwgdGlja3M6IFswLCAwLjEsIDAuMiwgMC4zLCAwLjQsIDAuNSwgMC42XSwgdGlja0Zvcm1hdDogKGQpID0+IHBjdChkLCB7IG1pbjogMCwgbWF4OiAwIH0pLCBsYWJlbDogXCLQutC70LjQtdC90YLQuCwg0LrQvtC40YLQviDRgdC4INGC0YDRitCz0LLQsNGCXCIgfSxcbiAgeTogeyBheGlzOiBudWxsLCBkb21haW46IFtcIkxcIl0gfSxcbiAgbWFya3M6IFtcbiAgICBQbG90LmJhclgoW0wgLyAxMDBdLCB7IHg6IChkKSA9PiBkLCB5OiAoKSA9PiBcIkxcIiwgZmlsbDogXCIjOTk5XCIsIGluc2V0VG9wOiA2LCBpbnNldEJvdHRvbTogNiB9KSxcbiAgICBQbG90LnJ1bGVYKFtjbF0sIHsgc3Ryb2tlOiBpbmssIHN0cm9rZVdpZHRoOiAzIH0pLFxuICAgIFBsb3QudGV4dChbY2xdLCB7IHg6IChkKSA9PiBkLCBmcmFtZUFuY2hvcjogXCJ0b3BcIiwgZHk6IC0zMCwgdGV4dDogKGQpID0+IGDQmtCXID0gJHtwY3QoZCl9YCwgZm9udFNpemU6IDE3LCBmaWxsOiBpbmsgfSksXG4gICAgUGxvdC5ydWxlWChbMF0sIHsgc3Ryb2tlOiBpbmsgfSksXG4gIF0sXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0xMiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Imh0bWxgPHAgY2xhc3M9XCJyZWFkb3V0XCI+PHN0cm9uZz4ke2NsVGV4dH08L3N0cm9uZz48L3A+YFxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0xMyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImNsID0gY3JpdGljYWxMb3NzKFggLyAxMDAsIE0gLyAxMDApXG5kUHJvZml0ID0gcHJvZml0Q2hhbmdlKFggLyAxMDAsIE0gLyAxMDAsIEwgLyAxMDApXG5jbFN0YXRlID0gbG9zc1ZlcmRpY3QoTCAvIDEwMCwgY2wpXG5jbFRleHQgPSAoeyBwcm9maXQ6IFwi0J/QvtCy0LjRiNC10L3QuNC10YLQviDQtSDQuNC30LPQvtC00L3QvlwiLCBsb3NzOiBcItCd0LXQuNC30LPQvtC00L3Qvjog0LrQu9C40LXQvdGC0LjRgtC1INC40LzQsNGCINC30LDQvNC10YHRgtC40YLQtdC70LgsINC/0LDQt9Cw0YDRitGCINC1INC/0L4t0YjQuNGA0L7QulwiLCBlZGdlOiBcItCd0LAg0YDRitCx0LBcIiB9KVtjbFN0YXRlXVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdndWVzc1RleHQnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnWCcpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdNJykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ0wnKSJ9XX0=
+    </script>
+    <script type="module">
+    if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+    window._ojs.paths.runtimeToDoc = "../../..";
+    window._ojs.paths.runtimeToRoot = "../../../../..";
+    window._ojs.paths.docToRoot = "../..";
+    window._ojs.selfContained = false;
+    window._ojs.runtime.interpretFromScriptTags();
     </script>
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
