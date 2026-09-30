@@ -10,6 +10,12 @@ $presentation-heading-color: #222;
 $link-color: #222;
 
 /*-- scss:rules --*/
+// Room for list numbers: Safari sets them further left than Chrome, and a
+// scrollable slide clips anything past its left edge.
+.reveal ol {
+  margin-left: 1.6em;
+}
+
 .reveal table {
   margin-left: 0;
   font-size: 0.8em;
