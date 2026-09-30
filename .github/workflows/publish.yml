@@ -1,0 +1,45 @@
+name: Publish the public slides
+
+# Manual only. Run it after each lecture (Actions → "Publish the public
+# slides" → Run workflow): the public build debriefs the market-entry game,
+# so it must not be online before the class has played it.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    env:
+      QUARTO_PROFILE: public
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: 1.8.27
+
+      - name: Test the widget models against the brief's test cases
+        run: quarto run tests/models_test.ts
+
+      - name: Render the public profile
+        run: quarto render --profile public
+
+      - name: Check that no speaker notes leaked into the public build
+        run: |
+          if grep -R --include='*.html' -l -e 'class="notes"' _site; then
+            echo "Speaker notes found in the public build" >&2
+            exit 1
+          fi
+
+      - name: Publish _site to the gh-pages branch
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+          render: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

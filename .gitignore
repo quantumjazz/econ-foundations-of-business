@@ -1,0 +1,16 @@
+# Quarto build output (both profiles) and caches
+/_site/
+/_site-instructor/
+/.quarto/
+**/*.quarto_ipynb
+/site_libs/
+
+# Local tooling
+/.claude/
+.DS_Store
+__pycache__/
+*.pyc
+
+# Editors
+.Rhistory
+.Rproj.user/

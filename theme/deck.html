@@ -1,0 +1,43 @@
+<script>
+/*
+  Phone reading mode.
+
+  Below 435 px reveal.js switches to its scroll view (slides stacked for
+  vertical scrolling). By default it would still draw each 1280×720 slide at
+  about 30% scale. Here we swap in a portrait canvas instead, so text stays at
+  reading size and the theme's `html.phone` rules reflow columns into one.
+  Everything else (desktop, projector, print, speaker view) keeps 1280×720.
+*/
+(function () {
+  var WIDE = { width: 1280, height: 720, margin: 0.1, minScale: 0.2, maxScale: 2.0 };
+  var PHONE_WIDTH = 390;
+  var root = document.documentElement;
+  var isSpeakerFrame = /receiver/.test(window.location.search);
+  var current = null;
+
+  function phoneHeight() {
+    var h = Math.round(window.innerHeight * PHONE_WIDTH / Math.max(window.innerWidth, 1));
+    return Math.max(640, Math.min(h, 900));
+  }
+
+  function apply() {
+    var phone = !isSpeakerFrame && !Reveal.isPrintView() && Reveal.isScrollView();
+    var key = phone ? "phone:" + phoneHeight() : "wide";
+    if (key === current) return;
+    current = key;
+    root.classList.toggle("phone", phone);
+    Reveal.configure(phone
+      ? { width: PHONE_WIDTH, height: phoneHeight(), margin: 0, minScale: 0.5, maxScale: 1.6 }
+      : WIDE);
+    window.dispatchEvent(new CustomEvent("decklayout", { detail: { phone: phone } }));
+  }
+
+  function init() {
+    apply();
+    Reveal.on("resize", apply);
+    window.addEventListener("orientationchange", function () { setTimeout(apply, 250); });
+  }
+
+  if (Reveal.isReady()) { init(); } else { Reveal.on("ready", init); }
+})();
+</script>

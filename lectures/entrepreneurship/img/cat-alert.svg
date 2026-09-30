@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="128 112 356 348" role="img" aria-labelledby="title desc">
+  <title id="title">Котката забелязва наденицата</title>
+  <desc id="desc">Същата котка, но с отворени очи и наострени уши, гледа към наденицата до себе си.</desc>
+  <!-- Original illustration made for the course: the alert twin of cat-sausage.svg. -->
+
+  <rect x="0" y="424" width="600" height="96" fill="#EEF2F6"/>
+  <path d="M0 424H600" stroke="#CBD5E1" stroke-width="4"/>
+  <ellipse cx="386" cy="436" rx="118" ry="11" fill="#D6DEE7"/>
+  <ellipse cx="222" cy="438" rx="80" ry="8" fill="#D6DEE7"/>
+
+  <g transform="translate(46 0) rotate(-4 176 418)">
+    <rect x="104" y="401" width="146" height="34" rx="17" fill="#9C4F3A"/>
+    <path d="M124 409H228" stroke="#C27A62" stroke-width="5" stroke-linecap="round"/>
+    <path d="M104 418l-13-9M104 418l-13 9M250 418l13-9M250 418l13 9" stroke="#6F3526" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <path d="M452 414C506 418 512 452 470 456C430 460 380 452 330 447" fill="none" stroke="#4B4F58" stroke-width="20" stroke-linecap="round"/>
+  <path d="M312 432C300 372 306 312 348 286C392 262 444 284 458 338C470 386 466 420 452 432Z" fill="#4B4F58"/>
+  <ellipse cx="420" cy="398" rx="52" ry="38" fill="#3E424A"/>
+  <path d="M326 432C318 384 324 332 352 306C372 330 376 392 368 432Z" fill="#E7E5E4"/>
+  <path d="M338 372V424M362 374V424" stroke="#4B4F58" stroke-width="22" stroke-linecap="round"/>
+  <ellipse cx="336" cy="429" rx="16" ry="8" fill="#E7E5E4"/>
+  <ellipse cx="364" cy="429" rx="16" ry="8" fill="#E7E5E4"/>
+
+  <!-- head: turned down towards the sausage, eyes wide open -->
+  <g transform="rotate(12 352 236)">
+    <path d="M300 206L292 136L344 180Z" fill="#4B4F58"/>
+    <path d="M306 194L302 154L331 178Z" fill="#E8B4A6"/>
+    <path d="M372 178L414 136L414 206Z" fill="#4B4F58"/>
+    <path d="M381 180L406 154L407 194Z" fill="#E8B4A6"/>
+    <ellipse cx="352" cy="236" rx="66" ry="56" fill="#4B4F58"/>
+    <ellipse cx="330" cy="262" rx="34" ry="22" fill="#E7E5E4"/>
+    <circle cx="318" cy="228" r="13" fill="#FDE68A"/>
+    <circle cx="364" cy="228" r="13" fill="#FDE68A"/>
+    <ellipse cx="314" cy="229" rx="4" ry="10" fill="#111827"/>
+    <ellipse cx="360" cy="229" rx="4" ry="10" fill="#111827"/>
+    <path d="M318 252h14l-7 8z" fill="#D9777A"/>
+    <path d="M325 260q-5 7-11 4M325 260q5 7 11 4" fill="none" stroke="#111827" stroke-width="3" stroke-linecap="round"/>
+    <path d="M296 256l-46-6M296 264l-46 6M356 256l44-8M356 264l44 4" stroke="#CBD5E1" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- the moment of noticing -->
+  <path d="M254 150l10 40M226 172l26 24M284 138l2 36" stroke="#0F172A" stroke-width="6" stroke-linecap="round"/>
+</svg>

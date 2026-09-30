@@ -1,0 +1,728 @@
+/*-- scss:defaults --*/
+
+// Victor's house theme, as in Data Driven Business Decisions (styles.scss).
+$font-family-sans-serif: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+$presentation-heading-font: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+$presentation-font-size-root: 36px;
+$presentation-heading-color: #1a1a2e;
+$presentation-h1-font-size: 1.6em;
+$presentation-h2-font-size: 1.3em;
+$presentation-h3-font-size: 1.1em;
+$body-color: #2d2d2d;
+$link-color: #2563eb;
+
+// Colour roles for diagrams and widgets only. The same colour means the same
+// role on every slide, diagram and widget, always with a text label as well.
+$entrant:   #0F766E;   // предприемач / нов играч
+$incumbent: #B45309;   // заварен играч
+$market:    #475569;   // пазар / потребители
+$profit:    #15803D;   // печалба
+$loss:      #B91C1C;   // загуба
+
+/*-- scss:rules --*/
+
+// --- House theme (unchanged from styles.scss) -------------------------------
+
+.reveal .slide-number {
+  font-size: 0.5em;
+  color: #888;
+}
+
+.reveal .slides section {
+  text-align: left;
+}
+
+.reveal h1, .reveal h2, .reveal h3 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.reveal h2 {
+  border-bottom: 3px solid #2563eb;
+  padding-bottom: 0.3em;
+  margin-bottom: 0.6em;
+}
+
+.reveal ul, .reveal ol {
+  font-size: 0.85em;
+  line-height: 1.6;
+}
+
+.reveal li {
+  margin-bottom: 0.3em;
+}
+
+.reveal .highlight-box {
+  background: #f0f4ff;
+  border-left: 4px solid #2563eb;
+  padding: 0.8em 1.2em;
+  border-radius: 6px;
+  margin: 0.6em 0;
+  font-size: 0.85em;
+}
+
+.reveal .case-study {
+  background: #fff7ed;
+  border-left: 4px solid #f59e0b;
+  padding: 0.8em 1.2em;
+  border-radius: 6px;
+  margin: 0.6em 0;
+}
+
+.reveal .stat-big {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #2563eb;
+  text-align: center;
+  margin: 0.3em 0;
+}
+
+.reveal .stat-label {
+  font-size: 0.7em;
+  text-align: center;
+  color: #666;
+}
+
+.reveal .two-col {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  gap: 1.25em;
+  align-items: start;
+  width: 100%;
+}
+
+.reveal .two-col > .column {
+  min-width: 0;
+}
+
+.reveal .embed-frame {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+}
+
+.reveal .embed-frame iframe {
+  display: block;
+}
+
+.reveal .emoji-icon {
+  font-size: 1.3em;
+}
+
+.reveal blockquote {
+  background: #f9fafb;
+  border-left: 4px solid #d1d5db;
+  padding: 0.6em 1em;
+  font-style: italic;
+  font-size: 0.85em;
+  margin: 0.6em 0;
+}
+
+.reveal .footer {
+  font-size: 0.4em;
+}
+
+.reveal table {
+  font-size: 0.7em;
+}
+
+.reveal table th {
+  background: #1a1a2e;
+  color: white;
+  padding: 0.4em 0.8em;
+}
+
+.reveal table td {
+  padding: 0.3em 0.8em;
+}
+
+// --- Additions for this course -----------------------------------------------
+// Same visual language: navy text, blue accent #2563eb on #f0f4ff, greys
+// #666 / #888 / #d1d5db / #f9fafb. Role colours appear only in diagrams,
+// widgets and role labels.
+
+:root {
+  --entrant: #{$entrant};
+  --incumbent: #{$incumbent};
+  --market: #{$market};
+  --profit: #{$profit};
+  --loss: #{$loss};
+  --entrant-tint: #F0FDFA;
+  --incumbent-tint: #FFFBEB;
+  --market-tint: #F1F5F9;
+  --profit-tint: #F0FDF4;
+  --loss-tint: #FEF2F2;
+  --ink: #1a1a2e;
+  --text: #2d2d2d;
+  --muted: #666;
+  --faint: #888;
+  --line: #d1d5db;
+  --surface: #f9fafb;
+  --accent: #2563eb;
+  --accent-tint: #f0f4ff;
+}
+
+// Standard Cyrillic letterforms, as in the other decks (some fonts switch to
+// Bulgarian-style forms when lang="bg").
+.reveal { font-feature-settings: "locl" 0; }
+
+.reveal .small { font-size: 0.75em; }
+.reveal .muted { color: #666; }
+
+.reveal .source,
+.reveal .cite,
+.reveal figcaption {
+  font-size: 0.45em;
+  color: #666;
+  font-style: normal;
+}
+.reveal .source { margin-top: 0.8em; }
+
+.reveal .lead {
+  font-size: 0.9em;
+  line-height: 1.45;
+  margin: 0 0 0.6em;
+}
+.reveal .lead.small { font-size: 0.72em; }
+
+.reveal .subtitle-line {
+  font-size: 0.72em;
+  font-style: italic;
+  color: #2d2d2d;
+  margin: -0.3em 0 0.9em;
+}
+
+// Key messages and questions use the highlight-box look.
+.reveal .punch,
+.reveal .ask,
+.reveal .takeaway {
+  background: #f0f4ff;
+  border-left: 4px solid #2563eb;
+  border-radius: 6px;
+  margin: 0.6em 0;
+}
+.reveal .punch {
+  padding: 0.5em 1em;
+  font-size: 0.95em;
+  font-weight: 600;
+  color: #1a1a2e;
+}
+.reveal .ask {
+  padding: 0.55em 1.1em;
+  font-size: 0.75em;
+}
+.reveal .takeaway {
+  padding: 0.45em 1em;
+  font-size: 0.55em;
+}
+.reveal .takeaway p { display: inline; margin: 0; }
+.reveal .takeaway::before { content: "Изводът: "; font-weight: 600; }
+
+// Grids
+.reveal .cols-2,
+.reveal .cols-3 {
+  display: grid;
+  gap: 1.25em;
+  align-items: start;
+  width: 100%;
+}
+.reveal .cols-2 { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.reveal .cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.8em; }
+.reveal .cols-2.wide-left { grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.9fr); }
+.reveal .cols-2.wide-right { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.25fr); }
+.reveal .v-center { align-items: center; }
+.reveal .cards { align-items: stretch; }
+
+// Cards: highlight boxes side by side
+.reveal .card {
+  background: #f0f4ff;
+  border-left: 4px solid #2563eb;
+  border-radius: 6px;
+  padding: 0.7em 0.9em;
+  font-size: 0.68em;
+  line-height: 1.4;
+}
+.reveal .card h3 { font-size: 1.1em; margin: 0.3em 0 0.3em; color: #1a1a2e; }
+.reveal .card p { margin: 0 0 0.4em; }
+.reveal .card .icon { display: block; height: 90px; width: auto; max-width: 100%; margin: 0 0 0.2em; }
+.reveal .example { display: block; color: #666; font-style: italic; margin-top: 0.3em; }
+
+// Dialogue (slide 2)
+.reveal .dialogue p { margin: 0 0 0.5em; font-size: 0.9em; }
+.reveal .dialogue .who { font-weight: 600; color: #666; margin-right: 0.3em; }
+.reveal .euro-icon { display: block; width: 100%; max-width: 420px; margin: 0 auto; }
+
+// Poll prompt line (slide 9)
+.reveal .poll-line { font-size: 0.7em; margin: 0 0 0.6em; }
+
+// Lecture path (slide 4 and the dividers)
+.reveal ol.lecture-path {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.8em;
+  line-height: 1.3;
+}
+.reveal .lecture-path .path-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  margin: 0;
+  padding: 0.18em 0;
+  color: #2d2d2d;
+}
+.reveal .lecture-path .path-item + .path-item::before {
+  content: "";
+  position: absolute;
+  left: 21px;
+  top: -12px;
+  width: 2px;
+  height: 24px;
+  background: #d1d5db;
+}
+.reveal .lecture-path .path-node {
+  flex: none;
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid #d1d5db;
+  background: #fff;
+  font-size: 0.7em;
+  font-weight: 700;
+  color: #666;
+  position: relative;
+  z-index: 1;
+}
+.reveal .lecture-path .done { color: #9ca3af; }
+.reveal .lecture-path .done .path-node { color: #9ca3af; background: #f9fafb; }
+.reveal .lecture-path .current { color: #1a1a2e; font-weight: 600; }
+.reveal .lecture-path .current .path-node { background: #2563eb; border-color: #2563eb; color: #fff; }
+.reveal .lecture-path .path-now {
+  font-size: 0.5em;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #2563eb;
+  background: #f0f4ff;
+  border-radius: 999px;
+  padding: 0.2em 0.7em;
+}
+.reveal .slides section.divider h2 {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+.reveal .slides section.divider {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+}
+.reveal .lecture-path.is-divider { font-size: 0.85em; }
+.reveal .lecture-path.is-divider .current { font-size: 1.15em; }
+
+.reveal .visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+// Title slide: house layout plus the illustration above the title
+.reveal .quarto-title-block .title-art {
+  display: block;
+  height: 230px;
+  width: auto;
+  margin: 0 auto 0.4em;
+}
+
+// Big statement (slide 10)
+.reveal .slides section.statement h2 { font-size: 2em; }
+
+// Slide 6: people and contrasts
+.reveal .people ol { font-size: 0.8em; }
+.reveal .contrasts ul { list-style: none; margin: 0; padding: 0; font-size: 0.75em; }
+.reveal .contrasts li {
+  background: #f9fafb;
+  border-left: 4px solid #d1d5db;
+  border-radius: 6px;
+  padding: 0.35em 0.8em;
+  margin-bottom: 0.5em;
+}
+.reveal .contrasts .sep { color: #888; margin: 0 0.3em; }
+
+// Slide 7: markers in the table
+.reveal .pp-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 1.3em;
+  height: 1.3em;
+  border-radius: 50%;
+  margin-right: 0.4em;
+  font-weight: 700;
+  color: #fff;
+}
+.reveal .pp-mark.plus  { background: var(--profit); }
+.reveal .pp-mark.same  { background: var(--market); }
+.reveal .pp-mark.minus { background: var(--loss); }
+.reveal .types-table table { width: 100%; font-size: 0.72em; }
+
+// Citations inside bullet lists stay legible
+.reveal li .cite { font-size: 0.72em; }
+
+// Slide 8
+.reveal .figure-frame figcaption,
+.reveal .figure-frame .figure-caption { font-size: 0.45em !important; color: #666; margin-top: 0.4em; }
+.reveal .figure-frame img { display: block; width: 100%; height: auto; border-radius: 6px; margin: 0; }
+.reveal .china .lead { font-size: 0.9em; }
+
+// Slide 9: eight cases
+.reveal .case-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.45em;
+}
+.reveal .case {
+  background: #f9fafb;
+  border-left: 4px solid #d1d5db;
+  border-radius: 6px;
+  padding: 0.45em 0.6em;
+  font-size: 0.6em;
+  line-height: 1.35;
+}
+.reveal .case p { margin: 0; }
+.reveal .case-n {
+  display: inline-grid;
+  place-items: center;
+  width: 1.6em;
+  height: 1.6em;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #fff;
+  font-weight: 700;
+  margin-right: 0.35em;
+}
+
+// Slide 11
+.reveal .game-rules ul { font-size: 0.72em; line-height: 1.5; }
+
+// Slide 12
+.reveal .results-img { display: block; width: 100%; max-height: 470px; object-fit: contain; border: 1px solid #d1d5db; border-radius: 8px; }
+.reveal .results-legend { font-size: 0.45em; color: #666; margin-top: 0.4em; }
+
+// Slide 13: two big numbers in the stat-big style
+.reveal .stat-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2em; margin-top: 0.2em; }
+.reveal .stat { text-align: center; }
+.reveal .stat-n { display: block; font-size: 1.9em; font-weight: 700; line-height: 1.1; }
+.reveal .stat-l { display: block; font-size: 0.7em; color: #666; }
+.reveal .stat.profit .stat-n { color: var(--profit); }
+.reveal .stat.loss .stat-n { color: var(--loss); }
+
+// Slide 15
+.reveal .money-points ul { font-size: 0.68em; line-height: 1.45; }
+.reveal .flip { font-size: 0.5em; }
+.reveal .flip-track { height: 18px; background: #f9fafb; border: 1px solid #d1d5db; border-radius: 4px; overflow: hidden; }
+.reveal .flip-bar { height: 100%; background: var(--market); transition: width 0.25s ease; }
+.reveal .flip-n { font-size: 2em; font-weight: 700; color: #1a1a2e; margin: 0.15em 0 0; font-variant-numeric: tabular-nums; }
+.reveal .flip-cap { color: #666; margin: 0; }
+
+// Slide 16: four findings
+.reveal .findings { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7em; }
+.reveal .finding {
+  background: #f0f4ff;
+  border-left: 4px solid #2563eb;
+  border-radius: 6px;
+  padding: 0.6em 0.9em;
+  font-size: 0.72em;
+}
+.reveal .finding h3 { font-size: 1.1em; margin: 0 0 0.2em; }
+.reveal .finding p { margin: 0; }
+
+// Slide 18: the chain of substitutes
+.reveal .chain { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4em 0; margin: 0.8em 0; }
+.reveal .chain-item {
+  font-size: 0.75em;
+  background: #fff;
+  border: 2px solid var(--market);
+  border-radius: 999px;
+  padding: 0.2em 0.8em;
+  position: relative;
+}
+.reveal .chain-item + .chain-item { margin-left: 1.3em; }
+.reveal .chain-item + .chain-item::before {
+  content: "";
+  position: absolute;
+  left: -1.3em;
+  top: 50%;
+  width: 1.3em;
+  height: 2px;
+  background: var(--market);
+}
+
+// Slide 19: numbered steps
+.reveal .steps ol { list-style: none; counter-reset: step; margin: 0; padding: 0; font-size: 0.8em; }
+.reveal .steps ol > li {
+  counter-increment: step;
+  position: relative;
+  padding-left: 2.2em;
+  margin-bottom: 0.7em;
+  line-height: 1.45;
+}
+.reveal .steps ol > li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0.05em;
+  display: grid;
+  place-items: center;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #fff;
+  font-size: 0.9em;
+  font-weight: 700;
+}
+
+// Slide 21: who is in the market?
+.reveal .free ul { font-size: 0.66em; line-height: 1.45; }
+.reveal .market-box { font-size: 0.5em; }
+.reveal .mb-outer { border: 2px dashed var(--market); border-radius: 10px; padding: 0.6em; }
+.reveal .mb-inner { border: 2px solid var(--market); border-radius: 8px; padding: 0.6em; margin-bottom: 0.6em; background: var(--market-tint); }
+.reveal .mb-label { display: block; font-weight: 600; color: var(--market); margin-bottom: 0.4em; }
+.reveal .mb-chip { display: inline-block; background: #fff; border: 1.5px solid #d1d5db; border-radius: 999px; padding: 0.15em 0.7em; margin: 0 0.2em 0.35em 0; }
+.reveal .mb-chip.meta { border-color: var(--incumbent); color: var(--incumbent); font-weight: 600; }
+.reveal .mb-legend { display: block; margin-top: 0.5em; color: #666; }
+.reveal .meta-key { color: var(--incumbent); }
+
+// Slide 22: the boycott day and the common factor
+.reveal .boycott ul { font-size: 0.66em; line-height: 1.45; }
+.reveal .day-bars { position: relative; display: flex; align-items: flex-end; gap: 1em; height: 180px; padding-top: 30px; font-size: 0.5em; margin-bottom: 1em; }
+.reveal .day-bars .day { display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 100%; width: 110px; }
+.reveal .day-bars .bar { width: 100%; background: var(--market); border-radius: 4px 4px 0 0; }
+.reveal .day-bars .bar.boycott { background: #94A3B8; }
+.reveal .day-bars .v { margin: 0.2em 0 0; font-weight: 700; color: #1a1a2e; }
+.reveal .day-bars .d { margin: 0; color: #666; text-align: center; line-height: 1.25; }
+.reveal .day-bars { height: 200px; }
+.reveal .day-bars .drop { position: absolute; left: 270px; top: 40px; margin: 0; font-size: 1.6em; font-weight: 700; color: var(--loss); }
+.reveal .day-bars .unit { position: absolute; left: 270px; top: 88px; margin: 0; color: #666; }
+.reveal svg.factor { max-width: 400px; }
+
+// Slide 23
+.reveal .tf { font-size: 0.8em; margin: 0 0 0.6em; }
+.reveal .tf-q { font-weight: 600; color: #666; margin-right: 0.4em; }
+.reveal .tf-answer { font-weight: 700; color: #2563eb; margin-left: 0.4em; }
+.reveal .barriers table { width: 100%; }
+
+// Slide 24
+.reveal .fuel-chain { margin-top: 0.4em; }
+
+// Slides 25–28
+.reveal .options-row { display: flex; gap: 0.6em; margin: 0.3em 0 0.6em; }
+.reveal .opt { font-size: 0.8em; font-weight: 700; color: #1a1a2e; border: 2px solid #d1d5db; border-radius: 8px; padding: 0.1em 0.8em; }
+.reveal .poll-lead { font-size: 0.8em; }
+.reveal .tree-layout { display: grid; grid-template-columns: minmax(0, 1.9fr) minmax(0, 1fr); gap: 1em; align-items: center; }
+.reveal .tree-steps { font-size: 0.62em; line-height: 1.45; }
+.reveal .tree-steps ol { font-size: 1em; margin: 0.5em 0 0 1.1em; }
+.reveal .tree-steps .punch { font-size: 1.1em; }
+.reveal .tree-steps .tree-step { margin: 0.45em 0 0; }
+.reveal .tree-steps .tree-step p { margin: 0; }
+.reveal .full-tree .tree-steps { font-size: 0.55em; }
+
+// Role labels: colour plus text, never colour alone
+.reveal .role { font-weight: 600; }
+.reveal .role.entrant   { color: var(--entrant); }
+.reveal .role.incumbent { color: var(--incumbent); }
+.reveal .role.market    { color: var(--market); }
+
+// Inline SVG diagrams
+.reveal svg.diagram {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  font-family: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+.reveal svg .pre-pruned { opacity: 0.28; }
+.reveal svg .fragment.prune { opacity: 1; visibility: inherit; }
+.reveal svg .fragment.prune.visible { opacity: 0.28; }
+.reveal svg .fragment.bold { opacity: 1; visibility: inherit; }
+.reveal svg .fragment.bold.visible .edge-line { stroke-width: 7; }
+
+// Slide 31
+.reveal .route-n {
+  display: inline-grid;
+  place-items: center;
+  width: 1.6em;
+  height: 1.6em;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #fff;
+  font-weight: 700;
+}
+.reveal .routes .card { font-size: 0.62em; }
+
+// Slide 32: the compass
+.reveal .compass {
+  display: grid;
+  grid-template-columns: 9em 1fr 1fr 9em;
+  grid-template-rows: auto 1fr 1fr auto;
+  gap: 0.35em;
+  font-size: 0.6em;
+  height: 430px;
+}
+.reveal .compass .c-q {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #f0f4ff;
+  border-left: 4px solid #2563eb;
+  border-radius: 6px;
+  padding: 0.6em 0.9em;
+}
+.reveal .compass .c-q strong { color: #1a1a2e; font-size: 1.1em; }
+.reveal .compass .c-q span { color: #666; }
+.reveal .compass .c-tl { grid-column: 2; grid-row: 2; }
+.reveal .compass .c-tr { grid-column: 3; grid-row: 2; }
+.reveal .compass .c-bl { grid-column: 2; grid-row: 3; }
+.reveal .compass .c-br { grid-column: 3; grid-row: 3; }
+.reveal .compass .c-y-top { grid-column: 2 / 4; grid-row: 1; text-align: center; color: #666; font-weight: 600; }
+.reveal .compass .c-y-bottom { grid-column: 2 / 4; grid-row: 4; text-align: center; color: #666; font-weight: 600; }
+.reveal .compass .c-x-left { grid-column: 1; grid-row: 2 / 4; align-self: center; text-align: right; color: #666; font-weight: 600; }
+.reveal .compass .c-x-right { grid-column: 4; grid-row: 2 / 4; align-self: center; color: #666; font-weight: 600; }
+
+// Slide 30
+.reveal .lockin .card { font-size: 0.66em; }
+
+// Slide 35
+.reveal .refs { font-size: 0.5em; line-height: 1.6; }
+.reveal .refs-data { font-size: 0.45em; color: #666; margin-top: 0.5em; }
+.reveal .sources h3 { font-size: 0.7em; margin: 0.8em 0 0.3em; }
+.reveal ul.credits-list { font-size: 0.42em; line-height: 1.5; margin-left: 1em; }
+.reveal .credits-list .cr-slide { font-weight: 600; }
+.reveal .credits-list .cr-lic { color: #666; }
+
+// Interactive widgets (OJS)
+.reveal .widget {
+  display: grid;
+  grid-template-columns: 430px minmax(0, 1fr);
+  gap: 1.2em;
+  align-items: start;
+}
+.reveal .formula { font-size: 0.8em; font-weight: 600; color: #1a1a2e; margin: 0 0 0.4em; }
+.reveal .model-caption { font-size: 0.5em; color: #666; line-height: 1.45; margin: 0 0 0.6em; }
+.reveal .readout {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.2em 0.8em;
+  font-size: 0.62em;
+  margin-top: 0.6em;
+}
+.reveal .readout .k { color: #666; }
+.reveal .readout .v { font-weight: 700; color: #1a1a2e; font-variant-numeric: tabular-nums; }
+.reveal .readout .v.pos { color: var(--profit); }
+.reveal .readout .v.neg { color: var(--loss); }
+.reveal .price-line { font-size: 0.62em; margin: 0 0 0.3em; }
+.reveal .cl-row { display: flex; align-items: center; gap: 0.8em; }
+.reveal .verdict {
+  display: inline-block;
+  padding: 0.3em 0.7em;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.55em;
+  line-height: 1.3;
+  border: 2px solid currentColor;
+  margin: 0;
+}
+.reveal .verdict.profit    { color: var(--profit); background: var(--profit-tint); }
+.reveal .verdict.loss      { color: var(--loss); background: var(--loss-tint); }
+.reveal .verdict.edge      { color: #1a1a2e; background: #f9fafb; }
+.reveal .verdict.entrant   { color: var(--entrant); background: var(--entrant-tint); }
+.reveal .verdict.incumbent { color: var(--incumbent); background: var(--incumbent-tint); }
+.reveal .ld-readout .verdict { margin-top: 0.3em; }
+
+// Observable Inputs in the house font
+.reveal form[class^="oi-"], .reveal form[class*=" oi-"] {
+  --label-width: 190px;
+  --input-width: 220px;
+  font-family: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 20px;
+  width: 100%;
+  max-width: 430px;
+  margin: 0 0 10px;
+}
+.reveal form input[type="range"] { accent-color: #2563eb; }
+.reveal form input[type="number"], .reveal form input[type="text"] { font-family: inherit; font-size: 20px; }
+.reveal form button { font-family: inherit; font-size: 16px; }
+.reveal .survival form[class^="oi-"], .reveal .survival form[class*=" oi-"] { --label-width: 190px; --input-width: 140px; }
+
+// Visibility helpers for the two canvases
+html:not(.phone) .reveal .only-phone { display: none !important; }
+
+// --- Phone reading mode (see theme/deck.html) --------------------------------
+
+html.phone .reveal {
+  font-size: 17px;
+  --r-main-font-size: 17px;
+}
+html.phone .reveal .slides section.slide,
+html.phone .reveal .slides section.quarto-title-block {
+  padding: 14px 18px 30px;
+}
+html.phone .reveal h2 { font-size: 22px; }
+html.phone .reveal .only-wide { display: none !important; }
+html.phone .reveal .cols-2,
+html.phone .reveal .cols-3,
+html.phone .reveal .cols-2.wide-left,
+html.phone .reveal .cols-2.wide-right,
+html.phone .reveal .widget,
+html.phone .reveal .tree-layout,
+html.phone .reveal .findings,
+html.phone .reveal .case-grid {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 10px;
+}
+html.phone .reveal .card,
+html.phone .reveal .finding { font-size: 14px; }
+html.phone .reveal .case { font-size: 12.5px; }
+html.phone .reveal .card .icon { height: 52px; }
+html.phone .reveal .punch { font-size: 17px; }
+html.phone .reveal .ask,
+html.phone .reveal .lead { font-size: 15px; }
+html.phone .reveal .takeaway { font-size: 13px; }
+html.phone .reveal .source,
+html.phone .reveal figcaption,
+html.phone .reveal .results-legend,
+html.phone .reveal .model-caption { font-size: 11px; }
+html.phone .reveal .lecture-path .path-node { width: 30px; height: 30px; font-size: 13px; }
+html.phone .reveal .lecture-path .path-item + .path-item::before { left: 14px; }
+html.phone .reveal .quarto-title-block .title-art { height: 170px; }
+html.phone .reveal .compass { height: auto; font-size: 12px; grid-template-columns: 5.5em 1fr 1fr 5.5em; }
+html.phone .reveal .readout,
+html.phone .reveal .price-line,
+html.phone .reveal .verdict { font-size: 14px; }
+html.phone .reveal .tree-steps { font-size: 14px; }
+html.phone .reveal .pan { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+html.phone .reveal .pan svg.diagram { min-width: 720px; }
+html.phone .reveal form[class^="oi-"], html.phone .reveal form[class*=" oi-"] {
+  --label-width: 120px;
+  font-size: 15px;
+  max-width: none;
+}
+html.phone .reveal .footer { display: none !important; }
+
+// Box titles (a styled paragraph instead of ### so Pandoc does not open a
+// nested <section>, which reveal.js would count as a slide)
+.reveal .box-title { display: block; font-size: 1.1em; font-weight: 600; color: #1a1a2e; letter-spacing: -0.02em; margin: 0 0 0.25em; }
+.reveal .refs-title { display: block; font-size: 0.7em; font-weight: 600; color: #1a1a2e; margin: 0.8em 0 0.3em; }
+html.phone .reveal .stat-n { font-size: 26px; }
+html.phone .reveal .stat-l { font-size: 13px; }

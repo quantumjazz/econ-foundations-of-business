@@ -1,0 +1,25 @@
+/*-- scss:defaults --*/
+// Landing page in the same house style as the decks.
+$font-family-sans-serif: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+$headings-font-weight: 600;
+$body-color: #2d2d2d;
+$headings-color: #1a1a2e;
+$link-color: #2563eb;
+$primary: #2563eb;
+
+/*-- scss:rules --*/
+body { font-feature-settings: "locl" 0; }
+h1.title { letter-spacing: -0.02em; border-bottom: 3px solid #2563eb; padding-bottom: 0.3em; }
+.quarto-title .subtitle { color: #666; }
+
+.deck-list { list-style: none; padding: 0; margin: 2rem 0; }
+.deck-list li {
+  background: #f0f4ff;
+  border-left: 4px solid #2563eb;
+  border-radius: 6px;
+  padding: 0.9rem 1.2rem;
+  margin-bottom: 0.8rem;
+}
+.deck-list .deck-n { color: #666; font-weight: 600; margin-right: 0.5rem; }
+.deck-list .deck-title { font-size: 1.15rem; font-weight: 600; }
+.deck-list .deck-meta { display: block; color: #666; margin-top: 0.25rem; }

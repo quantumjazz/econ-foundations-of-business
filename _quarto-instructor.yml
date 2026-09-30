@@ -1,0 +1,6 @@
+# Instructor profile: what Victor presents from. Any instructor-only content
+# goes inside ::: {.content-visible when-profile="instructor"} (lecture 1 has
+# none at present). Rendered into its own folder so it can never be published
+# by accident.
+project:
+  output-dir: _site-instructor
