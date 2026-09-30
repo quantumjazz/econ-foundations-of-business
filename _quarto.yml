@@ -6,19 +6,12 @@ project:
 
 lang: bg
 
-filters:
-  - theme/lecture.lua
-
 format:
   html:
     theme: [cosmo, theme/site.scss]
     toc: false
   revealjs:
-    # Same settings and theme as the Data Driven Business Decisions decks.
     theme: [default, theme/nbu.scss]
-    template-partials:
-      - theme/title-slide.html
-    include-after-body: theme/deck.html
     slide-number: c/t
     hash: true
     center: false
@@ -28,13 +21,4 @@ format:
     height: 720
     margin: 0.1
     scrollable: true
-    progress: true
-    fig-align: center
-    code-overflow: wrap
-    highlight-style: github
-    link-external-newwindow: true
     footer: "Икономически основи на бизнеса | НБУ"
-    logo: ""
-
-execute:
-  echo: false

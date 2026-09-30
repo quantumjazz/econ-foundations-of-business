@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 570" width="1040" height="570" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' fill="#222">
+<title>Играта с ангажимент</title>
+<line x1="150" y1="250" x2="400" y2="90" stroke="#222" stroke-width="2"/>
+<text x="269.6" y="161.6" font-size="30" text-anchor="middle" transform="rotate(-32.6 269.6 161.6)">без капацитет</text>
+<line x1="150" y1="250" x2="400" y2="360" stroke="#222" stroke-width="2"/>
+<text x="279.0" y="295.8" font-size="30" text-anchor="middle" transform="rotate(23.7 279.0 295.8)">капацитет (−3)</text>
+<line x1="400" y1="360" x2="650" y2="280" stroke="#222" stroke-width="2"/>
+<text x="522.0" y="310.5" font-size="30" text-anchor="middle" transform="rotate(-17.7 522.0 310.5)">не влиза</text>
+<line x1="400" y1="360" x2="650" y2="470" stroke="#222" stroke-width="2"/>
+<text x="511.9" y="444.7" font-size="30" text-anchor="middle" transform="rotate(23.7 511.9 444.7)">влиза</text>
+<line x1="650" y1="470" x2="900" y2="410" stroke="#222" stroke-width="2"/>
+<text x="772.7" y="430.3" font-size="30" text-anchor="middle" transform="rotate(-13.5 772.7 430.3)">бори се</text>
+<line x1="650" y1="470" x2="900" y2="540" stroke="#222" stroke-width="2"/>
+<text x="766.2" y="536.3" font-size="30" text-anchor="middle" transform="rotate(15.6 766.2 536.3)">допуска</text>
+<circle cx="150" cy="250" r="6" fill="#222"/>
+<circle cx="400" cy="360" r="6" fill="#222"/>
+<circle cx="650" cy="470" r="6" fill="#222"/>
+<circle cx="400" cy="90" r="4" fill="#222"/>
+<circle cx="650" cy="280" r="4" fill="#222"/>
+<circle cx="900" cy="410" r="4" fill="#222"/>
+<circle cx="900" cy="540" r="4" fill="#222"/>
+<text x="136" y="260" font-size="30" text-anchor="end">Заварен</text>
+<text x="386" y="404" font-size="30" text-anchor="end">Предприемач</text>
+<text x="636" y="514" font-size="30" text-anchor="end">Заварен</text>
+<text x="416" y="100" font-size="30" text-anchor="start">(5, 6)</text>
+<text x="416" y="136" font-size="24" text-anchor="start">както на предишния слайд</text>
+<text x="666" y="290" font-size="30" text-anchor="start">(0, 7)</text>
+<text x="916" y="420" font-size="30" text-anchor="start">(−1, 5)</text>
+<text x="916" y="550" font-size="30" text-anchor="start">(5, 3)</text>
+</svg>

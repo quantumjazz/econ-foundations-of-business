@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 96" role="img" aria-labelledby="title">
-  <title id="title">Икона: зар с въпросителен знак — несигурност</title>
-  <!-- Original icon. Teal = предприемач. -->
-  <rect x="28" y="10" width="68" height="68" rx="14" fill="none" stroke="#0F766E" stroke-width="5" transform="rotate(-8 62 44)"/>
-  <path d="M50 34q2-12 13-12q12 0 12 11q0 8-9 11q-4 2-4 8" fill="none" stroke="#0F766E" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" transform="rotate(-8 62 44)"/>
-  <circle cx="62" cy="63" r="4" fill="#0F766E" transform="rotate(-8 62 44)"/>
-  <path d="M8 84q10-6 20 0t20 0t20 0t20 0t20 0" fill="none" stroke="#94A3B8" stroke-width="4" stroke-linecap="round"/>
-</svg>
