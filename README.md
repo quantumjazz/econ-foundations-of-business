@@ -1,14 +1,22 @@
-# Икономически основи на бизнеса · НБУ
+# Икономически основи на бизнеса
 
-Lecture slides for the course „Икономически основи на бизнеса“ (New Bulgarian
-University), built as a Quarto course site with reveal.js decks in Bulgarian.
-Each deck is published on GitHub Pages **after** it has been given in class.
+**Economic Foundations of Business** · New Bulgarian University\
+доц. д-р Виктор Аврамов · vavramov@nbu.bg
 
-| # | Lecture | Source |
-|---|---------|--------|
-| 1 | Предприемачество: динамика, продуктивност и бариери за навлизане на пазарите | [lectures/entrepreneurship/index.qmd](lectures/entrepreneurship/index.qmd) |
+## Slides
 
-The build brief for lecture 1 is [brief-entrepreneurship.md](brief-entrepreneurship.md).
+Published on GitHub Pages: [quantumjazz.github.io/econ-foundations-of-business](https://quantumjazz.github.io/econ-foundations-of-business/)
+
+| # | Lecture | Slides | Source |
+|---|---------|--------|--------|
+| 1 | Предприемачество: динамика, продуктивност и бариери за навлизане на пазарите | [▶ View Slides](https://quantumjazz.github.io/econ-foundations-of-business/lectures/entrepreneurship/) | [index.qmd](lectures/entrepreneurship/index.qmd) |
+
+Each deck appears here after it has been given in class. In the slides: arrow
+keys or space to move, `F` full screen, `O` overview, `M` menu. On a phone,
+scroll down.
+
+The slides are Quarto reveal.js decks in Bulgarian. The build brief for
+lecture 1 is [brief-entrepreneurship.md](brief-entrepreneurship.md).
 
 ## Present a lecture
 
@@ -33,8 +41,12 @@ Keys: arrows to move, `F` full screen, `O` overview, `M` menu.
    the widget tests, renders `--profile public`, checks that no speaker notes
    leaked, and pushes `_site/` to the `gh-pages` branch.
 
-First time only: run `quarto publish gh-pages` once from this folder to create
-the `gh-pages` branch, then set **Settings → Pages → Branch: gh-pages**.
+First time only, before using the workflow: run `quarto publish gh-pages` once
+from this folder. It renders the public build, pushes it to a new `gh-pages`
+branch and writes `_publish.yml`, which the workflow needs: commit and push
+that file. GitHub then serves the site from `gh-pages` on its own (for a
+project site nothing needs setting under Settings → Pages; if Pages was already
+set to another source, switch it to **Deploy from a branch → gh-pages / root**).
 
 ## Build profiles
 
