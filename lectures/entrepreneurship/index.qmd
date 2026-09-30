@@ -317,13 +317,39 @@ clText = ({ profit: "Повишението е изгодно", loss: "Неиз�
 
 - КЗК: „Лукойл-България“ е лидер в търговията на едро с автомобилни горива с дял между 40% и 60%.
 - Октомври 2025: санкции на САЩ. 14 ноември 2025: правителството назначава особен търговски управител.
-- Веригата на горивата: внос на суров петрол, пристанищен терминал, рафинерия, складове, търговия на едро, бензиностанции. Готови горива могат да се внасят и направо до складовете.
 
 Ако собственикът трябва да излезе, по-лесно ли е навлизането? Къде са тесните места?
 
-::: fragment
-Тесни места: пристанищният терминал, рафинерията и складовете.
-:::
+```{=html}
+<svg viewBox="0 0 1134 214" style="width:100%;height:auto" role="img" aria-labelledby="fuel-t fuel-d" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' fill="#222">
+<title id="fuel-t">Веригата на горивата в България</title>
+<desc id="fuel-d">Основният път: внос на суров петрол, пристанищен терминал, рафинерия, складове, търговия на едро, бензиностанции. Паралелен път: внос на готови горива директно към складовете. Тесни места: терминалът, рафинерията и складовете.</desc>
+<defs><marker id="fuel-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#222"/></marker></defs>
+<rect x="4" y="112" width="160" height="64" rx="4" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="84" y="140" text-anchor="middle" font-size="19">внос на</text><text x="84" y="162" text-anchor="middle" font-size="19">суров петрол</text>
+<path d="M167 144H192" stroke="#222" stroke-width="2.5" marker-end="url(#fuel-arrow)"/>
+<rect x="197" y="112" width="160" height="64" rx="4" fill="#fff" stroke="#222" stroke-width="3.5"/>
+<text x="277" y="140" text-anchor="middle" font-size="19">пристанищен</text><text x="277" y="162" text-anchor="middle" font-size="19">терминал</text>
+<text x="277" y="200" text-anchor="middle" font-size="16" font-weight="600">тясно място</text>
+<path d="M360 144H385" stroke="#222" stroke-width="2.5" marker-end="url(#fuel-arrow)"/>
+<rect x="390" y="112" width="160" height="64" rx="4" fill="#fff" stroke="#222" stroke-width="3.5"/>
+<text x="470" y="151" text-anchor="middle" font-size="19">рафинерия</text>
+<text x="470" y="200" text-anchor="middle" font-size="16" font-weight="600">тясно място</text>
+<path d="M553 144H578" stroke="#222" stroke-width="2.5" marker-end="url(#fuel-arrow)"/>
+<rect x="583" y="112" width="160" height="64" rx="4" fill="#fff" stroke="#222" stroke-width="3.5"/>
+<text x="663" y="151" text-anchor="middle" font-size="19">складове</text>
+<text x="663" y="200" text-anchor="middle" font-size="16" font-weight="600">тясно място</text>
+<path d="M746 144H771" stroke="#222" stroke-width="2.5" marker-end="url(#fuel-arrow)"/>
+<rect x="776" y="112" width="160" height="64" rx="4" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="856" y="140" text-anchor="middle" font-size="19">търговия</text><text x="856" y="162" text-anchor="middle" font-size="19">на едро</text>
+<path d="M939 144H964" stroke="#222" stroke-width="2.5" marker-end="url(#fuel-arrow)"/>
+<rect x="969" y="112" width="160" height="64" rx="4" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="1049" y="151" text-anchor="middle" font-size="19">бензиностанции</text>
+<rect x="182" y="10" width="384" height="52" rx="4" fill="#fff" stroke="#222" stroke-width="1.5" stroke-dasharray="7 5"/>
+<text x="374" y="43" text-anchor="middle" font-size="19">внос на готови горива (паралелен път)</text>
+<path d="M566 36H663V107" fill="none" stroke="#222" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#fuel-arrow)"/>
+</svg>
+```
 
 ## Брой фирми и конкуренция {#s25}
 
@@ -431,6 +457,39 @@ clText = ({ profit: "Повишението е изгодно", loss: "Неиз�
 - Верига магазини среща нов играч във всеки от 20 града, един след друг.
 - Ако мислим отзад напред: в град 20 допусни, следователно и в 19… и така навсякъде (Selten 1978).
 - Реалните заварени играчи се съпротивляват на навлизането отрано. Защо?
+
+```{=html}
+<svg viewBox="0 0 1010 210" style="width:100%;height:auto" role="img" aria-labelledby="towns-t towns-d" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' fill="#222">
+<title id="towns-t">Веригата магазини и 20 града</title>
+<desc id="towns-d">Двадесет града в редица. Обратната индукция тръгва от град 20 и стига до извода да допуска навсякъде. В реалността веригата се бори в първите градове, за да изгради репутация.</desc>
+<defs><marker id="towns-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#222"/></marker></defs>
+<path d="M992 46H22" stroke="#222" stroke-width="2.5" marker-end="url(#towns-arrow)"/>
+<text x="505" y="30" text-anchor="middle" font-size="19">обратна индукция: допусни в 20, значи и в 19 … и така навсякъде</text>
+<path d="M12 124V100L30 82L48 100V124Z" fill="#fff" stroke="#222" stroke-width="1.5"/><rect x="22" y="104" width="16" height="20" fill="#555"/><circle cx="30" cy="68" r="6" fill="#fff" stroke="#222" stroke-width="2"/><text x="30" y="148" text-anchor="middle" font-size="15" fill="#666">1</text>
+<path d="M62 124V100L80 82L98 100V124Z" fill="#fff" stroke="#222" stroke-width="1.5"/><rect x="72" y="104" width="16" height="20" fill="#555"/><circle cx="80" cy="68" r="6" fill="#fff" stroke="#222" stroke-width="2"/><text x="80" y="148" text-anchor="middle" font-size="15" fill="#666">2</text>
+<path d="M112 124V100L130 82L148 100V124Z" fill="#fff" stroke="#222" stroke-width="1.5"/><rect x="122" y="104" width="16" height="20" fill="#555"/><circle cx="130" cy="68" r="6" fill="#fff" stroke="#222" stroke-width="2"/><text x="130" y="148" text-anchor="middle" font-size="15" fill="#666">3</text>
+<path d="M162 124V100L180 82L198 100V124Z" fill="#fff" stroke="#222" stroke-width="1.5"/><rect x="172" y="104" width="16" height="20" fill="#555"/><circle cx="180" cy="68" r="6" fill="#fff" stroke="#222" stroke-width="2"/><text x="180" y="148" text-anchor="middle" font-size="15" fill="#666">4</text>
+<path d="M212 124V100L230 82L248 100V124Z" fill="#fff" stroke="#222" stroke-width="1.5"/><rect x="222" y="104" width="16" height="20" fill="#555"/><circle cx="230" cy="68" r="6" fill="#fff" stroke="#222" stroke-width="2"/><text x="230" y="148" text-anchor="middle" font-size="15" fill="#666">5</text>
+<path d="M262 124V100L280 82L298 100V124Z" fill="#fff" stroke="#222" stroke-width="1.5"/><rect x="272" y="104" width="16" height="20" fill="#555"/><circle cx="280" cy="68" r="6" fill="#fff" stroke="#222" stroke-width="2"/><text x="280" y="148" text-anchor="middle" font-size="15" fill="#666">6</text>
+<path d="M312 124V100L330 82L348 100V124Z" fill="#fff" stroke="#222" stroke-width="1.5"/><rect x="322" y="104" width="16" height="20" fill="#555"/><circle cx="330" cy="68" r="6" fill="#fff" stroke="#222" stroke-width="2"/><text x="330" y="148" text-anchor="middle" font-size="15" fill="#666">7</text>
+<path d="M362 124V100L380 82L398 100V124Z" fill="#fff" stroke="#222" stroke-width="1.5"/><rect x="372" y="104" width="16" height="20" fill="#555"/><circle cx="380" cy="68" r="6" fill="#fff" stroke="#222" stroke-width="2"/><text x="380" y="148" text-anchor="middle" font-size="15" fill="#666">8</text>
+<path d="M412 124V100L430 82L448 100V124Z" fill="#fff" stroke="#222" stroke-width="1.5"/><rect x="422" y="104" width="16" height="20" fill="#555"/><circle cx="430" cy="68" r="6" fill="#fff" stroke="#222" stroke-width="2"/><text x="430" y="148" text-anchor="middle" font-size="15" fill="#666">9</text>
+<path d="M462 124V100L480 82L498 100V124Z" fill="#fff" stroke="#222" stroke-width="1.5"/><rect x="472" y="104" width="16" height="20" fill="#555"/><circle cx="480" cy="68" r="6" fill="#fff" stroke="#222" stroke-width="2"/><text x="480" y="148" text-anchor="middle" font-size="15" fill="#666">10</text>
+<path d="M512 124V100L530 82L548 100V124Z" fill="#fff" stroke="#222" stroke-width="1.5"/><rect x="522" y="104" width="16" height="20" fill="#555"/><circle cx="530" cy="68" r="6" fill="#fff" stroke="#222" stroke-width="2"/><text x="530" y="148" text-anchor="middle" font-size="15" fill="#666">11</text>
+<path d="M562 124V100L580 82L598 100V124Z" fill="#fff" stroke="#222" stroke-width="1.5"/><rect x="572" y="104" width="16" height="20" fill="#555"/><circle cx="580" cy="68" r="6" fill="#fff" stroke="#222" stroke-width="2"/><text x="580" y="148" text-anchor="middle" font-size="15" fill="#666">12</text>
+<path d="M612 124V100L630 82L648 100V124Z" fill="#fff" stroke="#222" stroke-width="1.5"/><rect x="622" y="104" width="16" height="20" fill="#555"/><circle cx="630" cy="68" r="6" fill="#fff" stroke="#222" stroke-width="2"/><text x="630" y="148" text-anchor="middle" font-size="15" fill="#666">13</text>
+<path d="M662 124V100L680 82L698 100V124Z" fill="#fff" stroke="#222" stroke-width="1.5"/><rect x="672" y="104" width="16" height="20" fill="#555"/><circle cx="680" cy="68" r="6" fill="#fff" stroke="#222" stroke-width="2"/><text x="680" y="148" text-anchor="middle" font-size="15" fill="#666">14</text>
+<path d="M712 124V100L730 82L748 100V124Z" fill="#fff" stroke="#222" stroke-width="1.5"/><rect x="722" y="104" width="16" height="20" fill="#555"/><circle cx="730" cy="68" r="6" fill="#fff" stroke="#222" stroke-width="2"/><text x="730" y="148" text-anchor="middle" font-size="15" fill="#666">15</text>
+<path d="M762 124V100L780 82L798 100V124Z" fill="#fff" stroke="#222" stroke-width="1.5"/><rect x="772" y="104" width="16" height="20" fill="#555"/><circle cx="780" cy="68" r="6" fill="#fff" stroke="#222" stroke-width="2"/><text x="780" y="148" text-anchor="middle" font-size="15" fill="#666">16</text>
+<path d="M812 124V100L830 82L848 100V124Z" fill="#fff" stroke="#222" stroke-width="1.5"/><rect x="822" y="104" width="16" height="20" fill="#555"/><circle cx="830" cy="68" r="6" fill="#fff" stroke="#222" stroke-width="2"/><text x="830" y="148" text-anchor="middle" font-size="15" fill="#666">17</text>
+<path d="M862 124V100L880 82L898 100V124Z" fill="#fff" stroke="#222" stroke-width="1.5"/><rect x="872" y="104" width="16" height="20" fill="#555"/><circle cx="880" cy="68" r="6" fill="#fff" stroke="#222" stroke-width="2"/><text x="880" y="148" text-anchor="middle" font-size="15" fill="#666">18</text>
+<path d="M912 124V100L930 82L948 100V124Z" fill="#fff" stroke="#222" stroke-width="1.5"/><rect x="922" y="104" width="16" height="20" fill="#555"/><circle cx="930" cy="68" r="6" fill="#fff" stroke="#222" stroke-width="2"/><text x="930" y="148" text-anchor="middle" font-size="15" fill="#666">19</text>
+<path d="M962 124V100L980 82L998 100V124Z" fill="#fff" stroke="#222" stroke-width="1.5"/><rect x="972" y="104" width="16" height="20" fill="#555"/><circle cx="980" cy="68" r="6" fill="#fff" stroke="#222" stroke-width="2"/><text x="980" y="148" text-anchor="middle" font-size="15" fill="#666">20</text>
+<path d="M10 160V170H148V160" fill="none" stroke="#222" stroke-width="2.5"/>
+<text x="10" y="196" font-size="19" font-weight="600">в реалността: борба в първите градове изгражда репутация</text>
+<g font-size="15" fill="#666"><circle cx="720" cy="190" r="6" fill="#fff" stroke="#222" stroke-width="2"/><text x="732" y="195">нов играч</text><rect x="820" y="181" width="14" height="18" fill="#555"/><text x="842" y="195">магазин от веригата</text></g>
+</svg>
+```
 
 ::: fragment
 Ако новите не знаят със сигурност дали завареният е склонен да се бори, борбата в първите градове му създава репутация, която възпира следващите (Kreps & Wilson 1982; Milgrom & Roberts 1982).
