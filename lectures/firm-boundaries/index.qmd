@@ -1,0 +1,569 @@
+---
+title: "Граници на фирмата: вертикална интеграция и външни отношения, хоризонтални граници и структура"
+subtitle: "Икономически основи на бизнеса, НБУ"
+author: "доц. д-р Виктор Аврамов"
+date: last-modified
+format: revealjs
+
+---
+
+## Какво прави кафенето само? {#s02}
+
+Отваря се кафене до НБУ. Кои от тези дейности кафенето извършва само и кои купува от други фирми?
+
+1. Изпичането на кафето
+2. Кроасаните и сандвичите
+3. Доставките до клиентите
+4. Счетоводството
+5. Мобилното приложение за поръчки
+6. Почистването
+
+## От крем за лице до LG {#s03}
+
+„С баща ми създадохме фабрика за козметичен крем в края на 40-те години. Тогава никоя фирма не можеше да ни достави достатъчно добри пластмасови капачки… Пластмасите ни въведоха и в рафинирането на нефт, за което беше нужна компания за танкерни превози. Рафинерията плащаше застрахователна премия, по-голяма от половината приходи на най-голямата застрахователна компания в Корея. Така създадохме и застрахователна компания.“
+
+Koo Cha-Kyung, син на основателя на Lucky-Goldstar, днес LG
+
+::: aside
+Цитатът е от Milgrom & Roberts (1992). Кремът Lucky Cream излиза през 1947\ г.; капачките му се чупят и фирмата купува първата в Корея машина за леене на пластмаса (LG Chem).
+:::
+
+## Две фирми, два отговора {#s04}
+
+| Фирма | Какво фирмата извършва сама | Причина |
+|----------|-----------------|-----------------|
+| Lucky-Goldstar (от\ 1947\ г.) | почти всичко: крема, капачките, пластмасите, рафинерията, застраховките | няма от кого да ги купи |
+| Instagram (2012\ г.) | почти нищо: 13 служители, когато Facebook я купува за 1\ млрд. долара | сървърите са наети от Amazon, разпространението минава през App Store |
+
+И двете решения са разумни за времето и мястото си. От какво зависи изборът?
+
+## Въпроси {#s05}
+
+1. Защо съществуват фирмите?
+2. Къде във веригата остава стойността?
+3. Да се прави или да се купува?
+4. Какво има между фирмата и пазара?
+5. Колко голяма да е фирмата?
+6. Колко широка да е фирмата?
+7. Кога си струва специализацията?
+
+# Защо съществуват фирми?
+
+## Пазар или фирма {#s06}
+
+Ако пазарът координира индивидуалните дейности толкова добре, защо не се купува всичко от него? Ако фирмата координира по-добре, защо няма една-единствена гигантска фирма?
+
+|  | Пазар | Фирма |
+|---------|---------------------|---------------|
+| Координира чрез | цени и договори | ръководство и контрол |
+| Цената на това е | транзакционни разходи: търсене на партньор, преговори, контрол на изпълнението | надзор, бюрокрация, по-слаби стимули |
+
+Фирмата расте, докато следващата извършвана дейност е по-евтина вътре в нея, отколкото на пазара (Coase 1937).
+
+## Технологиите местят границата {#s07}
+
+Преди 1850\ г. почти всички фирми са малки и семейни. Големи йерархии са само църквата, армията и няколко търговски компании като East India Company.
+
+| Период | Какво поевтинява | Ефект |
+|-------|-----------------|-----------------|
+| след 1850\ г. | управлението от разстояние: железници, параходи, телеграф | големи фирми с наети мениджъри: Standard Oil, General Motors, DuPont |
+| след 2006\ г. | използването на пазара: облачни услуги, платформи за разпространение | малки фирми с голям обхват: Instagram с 13 служители |
+
+Какво ще направи изкуственият интелект: по-големи или по-малки фирми?
+
+::: aside
+Редът за периода след 1850\ г. е по Chandler (1977).
+:::
+
+# Къде във веригата остава стойността?
+
+## Вертикалната верига {#s08}
+
+```{=html}
+<svg viewBox="0 0 1134 200" style="width:100%;height:auto" role="img" aria-labelledby="chain-t chain-d" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' fill="#222">
+<title id="chain-t">Вертикалната верига на горивата в България</title>
+<desc id="chain-d">Шест стъпки една след друга: внос на суров петрол, пристанищен терминал, рафинерия, складове, търговия на едро, бензиностанции. Гледната точка е рафинерията: първите две стъпки са нагоре по веригата, последните три са надолу по веригата. Един собственик, „Лукойл“, държи рафинерията, складовете, търговията на едро и бензиностанциите: вертикална интеграция.</desc>
+<defs><marker id="chain-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#222"/></marker></defs>
+<path d="M4 54V44H357V54" fill="none" stroke="#222" stroke-width="2.5"/>
+<text x="180.5" y="32" text-anchor="middle" font-size="17">нагоре по веригата</text>
+<text x="470" y="54" text-anchor="middle" font-size="16" font-weight="600">гледна точка</text>
+<path d="M583 54V44H1129V54" fill="none" stroke="#222" stroke-width="2.5"/>
+<text x="856" y="32" text-anchor="middle" font-size="17">надолу по веригата</text>
+<rect x="4" y="70" width="160" height="64" rx="4" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="84" y="98" text-anchor="middle" font-size="19">внос на</text><text x="84" y="120" text-anchor="middle" font-size="19">суров петрол</text>
+<path d="M167 102H192" stroke="#222" stroke-width="2.5" marker-end="url(#chain-arrow)"/>
+<rect x="197" y="70" width="160" height="64" rx="4" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="277" y="98" text-anchor="middle" font-size="19">пристанищен</text><text x="277" y="120" text-anchor="middle" font-size="19">терминал</text>
+<path d="M360 102H385" stroke="#222" stroke-width="2.5" marker-end="url(#chain-arrow)"/>
+<rect x="390" y="70" width="160" height="64" rx="4" fill="#fff" stroke="#222" stroke-width="3.5"/>
+<text x="470" y="109" text-anchor="middle" font-size="19">рафинерия</text>
+<path d="M553 102H578" stroke="#222" stroke-width="2.5" marker-end="url(#chain-arrow)"/>
+<rect x="583" y="70" width="160" height="64" rx="4" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="663" y="109" text-anchor="middle" font-size="19">складове</text>
+<path d="M746 102H771" stroke="#222" stroke-width="2.5" marker-end="url(#chain-arrow)"/>
+<rect x="776" y="70" width="160" height="64" rx="4" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="856" y="98" text-anchor="middle" font-size="19">търговия</text><text x="856" y="120" text-anchor="middle" font-size="19">на едро</text>
+<path d="M939 102H964" stroke="#222" stroke-width="2.5" marker-end="url(#chain-arrow)"/>
+<rect x="969" y="70" width="160" height="64" rx="4" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="1049" y="109" text-anchor="middle" font-size="19">бензиностанции</text>
+<path d="M390 146V156H1129V146" fill="none" stroke="#222" stroke-width="2.5"/>
+<text x="759.5" y="182" text-anchor="middle" font-size="17" font-weight="600">един собственик („Лукойл“): вертикална интеграция</text>
+</svg>
+```
+
+| Понятие | Значение |
+|-------------|-----------------------------|
+| Вертикална верига | всички стъпки от суровината до крайния клиент |
+| Нагоре и надолу по веригата | стъпките преди и след дадена фирма (upstream и downstream) |
+| Вертикална интеграция | няколко съседни стъпки в една фирма |
+| Добавена стойност | приходите минус купеното от други фирми; върху нея се начислява ДДС |
+
+## Кой получава цената на един iPhone? {#s09}
+
+:::: {.columns}
+::: {.column width="58%"}
+```{ojs}
+{
+  // Shares of the 549-dollar sales price of an iPhone 4: what the carrier paid Apple, while the
+  // customer paid 199 dollars on contract (Kraemer, Linden & Dedrick 2011, Table 1).
+  // Profits are gross profits. "Доставчици: брутна печалба" adds up six source rows;
+  // the shares sum to 100,2% by rounding.
+  const rows = [
+    { who: "Apple: брутна печалба", share: 0.585, dark: true },
+    { who: "Материали", share: 0.219, dark: false },
+    { who: "Доставчици: брутна печалба", share: 0.145, dark: false },
+    { who: "Труд извън Китай", share: 0.035, dark: false },
+    { who: "Труд в Китай", share: 0.018, dark: true },
+  ];
+  return Plot.plot({
+    width: 640,
+    height: 300,
+    marginLeft: 250,
+    marginRight: 70,
+    marginBottom: 48,
+    style: { fontFamily: font, fontSize: "16px", color: ink },
+    ariaLabel: "Разпределение на цената на iPhone 4 между Apple, доставчиците и труда",
+    x: { domain: [0, 0.7], ticks: [0, 0.2, 0.4, 0.6], tickFormat: (d) => pct(d, { min: 0, max: 0 }), label: "дял от продажната цена" },
+    y: { domain: rows.map((d) => d.who), label: null, tickSize: 0 },
+    marks: [
+      Plot.barX(rows, { x: "share", y: "who", fill: (d) => (d.dark ? "#444" : "#aaa"), insetTop: 6, insetBottom: 6 }),
+      Plot.text(rows, { x: "share", y: "who", text: (d) => pct(d.share), dx: 8, textAnchor: "start", fill: ink }),
+      Plot.ruleX([0], { stroke: ink }),
+    ],
+  });
+}
+```
+:::
+
+::: {.column width="42%"}
+- Apple проектира телефона и процесора. Процесора произвежда Samsung (днес TSMC), а телефона сглобява Foxconn.
+- Apple не притежава тези заводи, но през 2010\ г. 58,5% от продажната цена остават при нея като брутна печалба.
+:::
+::::
+
+Стойността остава при този, който държи дизайна и марката, а не при този, който сглобява.
+
+```{ojs}
+//| output: false
+// Shared setup for the charts and the bakery widget.
+Plot = import("https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6.17/+esm")
+import { averageCost, breakEvenQuantity, extraCostOfMaking, makeOrBuy, crossover } from "./lib/models.js"
+import { pct, num, eur } from "./lib/format.js"
+ink = "#222"
+font = "Helvetica Neue, Helvetica, Arial, sans-serif"
+```
+
+::: aside
+Kraemer, Linden & Dedrick (2011), оценки за iPhone 4. От 549 долара клиентът плаща 199, а мобилният оператор 350. През 2025\ г. брутният марж на Apple за всички устройства е 36,8%.
+:::
+
+## Същият модел от София {#s10}
+
+- Shelly Group (до 2023\ г. „Алтерко“) разработва в София устройства за умен дом.
+- Произвеждат ги външни фирми по договор; Shelly няма собствени заводи.
+- Приходите за 2025\ г. са 149,7\ млн. евро, с около 40% повече от предходната година.
+
+Защо Shelly не строи собствен завод?
+
+::: aside
+Shelly Group, Investors Report 2025 (април 2026).
+:::
+
+# Да се прави или да се купува?
+
+## Вярно или невярно? {#s11}
+
+| Твърдение | [Какво пропуска]{.fragment fragment-index=1} |
+|--------------------|--------------------|
+| „Фирмата купува, за да си спести разходите за производство.“ | [Разходите не изчезват: плащат се в цената на доставчика.]{.fragment fragment-index=1} |
+| „Фирмата произвежда сама, за да не оставя печалба на доставчика.“ | [Тази печалба е възвръщаемостта на капитал, който фирмата ще трябва да вложи сама.]{.fragment fragment-index=2} |
+| „Фирмата произвежда сама това, което ѝ дава конкурентно предимство.“ | [Ако може лесно да се купи на пазара, не е предимство; ако там е по-евтино, трябва да се купи.]{.fragment fragment-index=3} |
+| „Фирмата произвежда сама, за да не зависи от цените при недостиг.“ | [Договор с фиксирана цена дава същата защита.]{.fragment fragment-index=4} |
+
+::: {.fragment fragment-index=5}
+И четирите са сред най-честите заблуди при това решение (Besanko и др. 2013).
+:::
+
+## Три въпроса преди решението {#s12}
+
+| Въпрос | Ако отговорът е „да“ | Пример |
+|---------------|---------------|------------|
+| По-голям ли е доставчикът от фирмата в тази дейност? | купува: той има икономии от мащаба, които фирмата няма | кроасаните на кафенето |
+| Трябват ли на фирмата бързина и тясна координация? | прави сама | модата |
+| Ще зависи ли фирмата от един-единствен партньор? | прави сама или подписва дългосрочен договор | машина, която става само за един клиент |
+
+## Собствена пекарна или доставчик? {#s13}
+
+:::: {.columns}
+::: {.column width="46%"}
+```{ojs}
+// width 260: Safari needs the room to show four digits next to the number box's arrows.
+viewof Q = Inputs.range([300, 8000], { step: 100, value: 1500, label: "Кроасани на месец", width: 260 })
+```
+
+```{ojs}
+viewof pCents = Inputs.range([50, 150], { step: 5, value: 90, label: "Цена на доставчика, евроцента на брой", width: 260 })
+```
+
+```{ojs}
+viewof F = Inputs.range([500, 3000], { step: 100, value: 1500, label: "Постоянни разходи на пекарната, € на месец", width: 260 })
+```
+
+```{ojs}
+html`<p class="readout">Собствено производство: <strong>${eur(ac)}</strong> на брой<br>Доставчик: <strong>${eur(p)}</strong> на брой<br>Праг: <strong>${num(qbe, { max: 0 })}</strong> кроасана на месец</p>`
+```
+:::
+
+::: {.column width="54%"}
+```{ojs}
+{
+  const curve = d3.range(300, 8001, 50).map((q) => ({ Q: q, ac: averageCost(F, v, q) }));
+  const showQbe = qbe >= 300 && qbe <= 8000;
+  // When the curve runs above the price rule at the right edge, its label goes under the rule;
+  // the supplier's label goes on the side of its dot away from the rule.
+  const priceBelow = averageCost(F, v, 5600) > p;
+  const you = [{ Q, ac: Math.min(ac, 3) }];
+  const supplier = [{ Q: 7500, ac: acSupply }];
+  return Plot.plot({
+    width: 560,
+    height: 300,
+    marginLeft: 48,
+    marginRight: 24,
+    marginTop: 36,
+    marginBottom: 44,
+    style: { fontFamily: font, fontSize: "16px", color: ink },
+    ariaLabel: "Средни разходи на кроасан при собствено производство спрямо цената на доставчика",
+    x: { domain: [300, 8000], label: "кроасани на месец", tickFormat: (d) => num(d) },
+    y: { domain: [0, 3], label: "€ на брой", grid: true, tickFormat: (d) => num(d) },
+    marks: [
+      Plot.line(curve, { x: "Q", y: "ac", stroke: ink, strokeWidth: 2.5, clip: true }),
+      Plot.ruleY([p], { stroke: ink, strokeDasharray: "7 5" }),
+      Plot.text([p], { y: (d) => d, frameAnchor: "right", textAnchor: "end", lineAnchor: priceBelow ? "top" : "bottom", dy: priceBelow ? 6 : -6, text: () => "цена на доставчика", fill: ink }),
+      showQbe ? Plot.ruleX([qbe], { stroke: "#999", strokeDasharray: "4 4" }) : null,
+      showQbe ? Plot.text([qbe], { x: (d) => d, frameAnchor: "top", dy: -12, text: () => "праг", fill: "#666" }) : null,
+      Plot.dot(supplier, { x: "Q", y: "ac", r: 6, fill: "#999" }),
+      Plot.text(supplier, { x: "Q", y: "ac", lineAnchor: priceBelow ? "bottom" : "top", dy: priceBelow ? -12 : 12, text: () => "доставчикът", fill: "#666" }),
+      Plot.dot(you, { x: "Q", y: "ac", r: 6, fill: ink }),
+      Plot.text(you, { x: "Q", y: "ac", dx: 10, dy: -14, textAnchor: "start", text: () => "кафенето", fill: ink }),
+    ],
+  });
+}
+```
+
+```{ojs}
+html`<p class="readout"><strong>${makeText}</strong></p>`
+```
+:::
+::::
+
+При 1500 кроасана на месец собственото производство струва 1,40\ € на брой. Доставчикът продава по 0,90\ €, защото пече за пет кафенета и всеки кроасан му струва 0,60\ €.
+
+::: fragment
+А ако кафенето пече за пет кафенета и продава излишъка: ще купуват ли конкурентите от него?
+:::
+
+```{ojs}
+//| output: false
+v = 0.4
+p = pCents / 100
+ac = averageCost(F, v, Q)
+qbe = breakEvenQuantity(F, v, p)
+extra = extraCostOfMaking(F, v, p, Q)
+state = makeOrBuy(F, v, p, Q)
+acSupply = averageCost(F, v, 7500)
+makeText = ({ buy: `Купуването е по-изгодно: собственото производство е с ${eur(extra)} на месец по-скъпо`, make: `Собственото производство е по-изгодно: спестява ${eur(-extra)} на месец`, edge: "На ръба" })[state]
+```
+
+## Три отговора в модата {#s14}
+
+| Фирма | Производство | Какво печели |
+|---------|------------------|---------------|
+| Zara (Inditex) | 38% от фабриките, с които работи, са в Европа, Турция и Африка, близо до европейския пазар | бързина: реагира на търсенето за седмици |
+| H&M | без собствени фабрики; 554 външни доставчици | ниски разходи на единица |
+| Shein | външни доставчици; първа поръчка от 100–200 бройки на модел | непродадената стока е под 10% |
+
+Няма отговор, верен за всички: зависи колко бързо се променя търсенето.
+
+::: aside
+Modaes (март 2026); H&M Group; Shein, On-Demand Fashion (2024, по данни на фирмата).
+:::
+
+## Hold-up {#s15}
+
+Голям клиент иска от доставчика си специална опаковка. Машината за нея струва 4 и не става за никой друг клиент. Инвестира ли доставчикът?
+
+:::: {.columns}
+::: {.column width="62%"}
+```{=html}
+<svg viewBox="0 0 920 430" style="width:100%;height:auto" role="img" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' fill="#222"><title>Hold-up: доставчикът избира дали да инвестира; ако инвестира, купувачът избира дали да спази цената или да я предоговори. Печалби (доставчик, купувач): не инвестира (2, 2), спазва цената (5, 5), предоговаря (−1, 11).</title>
+<g class="fragment bold" data-fragment-index="2"><line x1="240" y1="200" x2="510" y2="70" stroke="#222" stroke-width="2"/></g>
+<text x="370.7" y="126.0" font-size="30" text-anchor="middle" transform="rotate(-25.7 370.7 126.0)">не инвестира</text>
+<circle cx="510" cy="70" r="4" fill="#222"/>
+<text x="526" y="80" font-size="30" text-anchor="start">(2, 2)</text>
+<g class="fragment prune" data-fragment-index="1"><line x1="510" y1="310" x2="770" y2="230" stroke="#222" stroke-width="2"/><text x="637.1" y="260.4" font-size="30" text-anchor="middle" transform="rotate(-17.1 637.1 260.4)">спазва цената</text><circle cx="770" cy="230" r="4" fill="#222"/><text x="786" y="240" font-size="30" text-anchor="start">(5, 5)</text></g>
+<g class="fragment prune" data-fragment-index="2"><line x1="240" y1="200" x2="510" y2="310" stroke="#222" stroke-width="2"/><text x="362.7" y="285.1" font-size="30" text-anchor="middle" transform="rotate(22.2 362.7 285.1)">инвестира</text><g class="fragment" data-fragment-index="1"><path d="M625.4 289.1L617.1 262.4M636.9 285.6L628.6 258.9" stroke="#222" stroke-width="3" stroke-linecap="round"/></g><g class="fragment bold" data-fragment-index="1"><line x1="510" y1="310" x2="770" y2="390" stroke="#222" stroke-width="2"/></g><text x="630.4" y="381.1" font-size="30" text-anchor="middle" transform="rotate(17.1 630.4 381.1)">предоговаря</text><circle cx="770" cy="390" r="4" fill="#222"/><text x="786" y="400" font-size="30" text-anchor="start">(−1, 11)</text><circle cx="510" cy="310" r="6" fill="#222"/><text x="496" y="354" font-size="30" text-anchor="end">Купувач</text></g>
+<g class="fragment" data-fragment-index="2"><path d="M350.7 260.2L361.2 234.3M361.8 264.7L372.3 238.8" stroke="#222" stroke-width="3" stroke-linecap="round"/></g>
+<circle cx="240" cy="200" r="6" fill="#222"/>
+<text x="226" y="210" font-size="30" text-anchor="end">Доставчик</text>
+</svg>
+```
+:::
+
+::: {.column width="38%"}
+Печалби: (доставчик, купувач).
+
+::: {.fragment fragment-index=1}
+1. Купувачът сравнява 5 и 11 и предоговаря. Доставчикът приема: иначе губи 4.
+:::
+
+::: {.fragment fragment-index=2}
+2. Доставчикът сравнява 2 и\ −1 и не инвестира.
+:::
+
+::: {.fragment fragment-index=3}
+И двамата получават 2 вместо 5.
+:::
+:::
+::::
+
+## Как се решава проблемът {#s16}
+
+| Решение | Защо работи | Пример |
+|-----------|-----------------|--------------|
+| Вертикална интеграция | двете страни са една фирма и няма с кого да се предоговаря | Lucky-Goldstar прави капачките си сама |
+| Дългосрочен договор | цената е уговорена преди инвестицията | доставка, договорена за години напред |
+| Репутация | купувачът ще търси доставчици и утре | „20-те града“ от миналата лекция |
+| Втори партньор | никой не е единствен клиент или доставчик | ресторант, който работи с две платформи |
+
+Вертикалната интеграция е отговор на зависимостта: колкото по-специфична е инвестицията, толкова по-вероятна е интеграцията (Klein, Crawford & Alchian 1978; Williamson 1985).
+
+## Зависимост от платформа {#s17}
+
+- Платформите за доставка на храна вземат между 25% и 35% от стойността на поръчката.
+- Takeaway обяви, че от 15\ септември 2026\ г. прекратява дейността си в България. Остават Glovo, Wolt и Bolt Food.
+
+Какво губи ресторант, който е продавал основно през Takeaway?
+
+Собствени куриери или платформа: как отговарят трите въпроса?
+
+::: aside
+Комисиони: „Марица“ (февруари 2026). Takeaway: „Таралеж“ и Economic.bg (август 2026).
+:::
+
+# Какво има между фирмата и пазара?
+
+## Външни отношения {#s18}
+
+| Форма | Какво представлява | Пример |
+|----------|---------------|---------------|
+| Сделка на пазара | купува се от когото е най-изгодно днес | млякото за кафенето |
+| Дългосрочен договор | цена и количества са уговорени за години напред | доставки на природен газ |
+| Франчайз | марка и система срещу такса; обектът е на друг собственик | около 95% от ресторантите на McDonald's |
+| Съюз или съвместно предприятие | няколко фирми влагат ресурси в обща дейност | Star Alliance: общи маршрути и програми за лоялност |
+| Собствена дейност | всичко е в една фирма | Lucky-Goldstar, „Лукойл“ |
+
+Колкото по-силно зависят страните една от друга, толкова по-надолу в таблицата е решението.
+
+## Четири аптеки {#s19}
+
+- По закон едно лице може да открие не повече от четири аптеки.
+- Вериги има въпреки това: група от отделни дружества, всяко с по четири аптеки (КЗК).
+- През септември 2026\ г. фармацевтите поискаха промяна в закона срещу концентрацията чрез свързани лица.
+
+Къде е границата на една аптечна верига: в закона, в собствеността или в общата марка?
+
+::: aside
+КЗК, по Mediapool (януари 2017); БТА (25 септември 2026).
+:::
+
+# Колко голяма да е фирмата?
+
+## Икономии от мащаба {#s20}
+
+Средните разходи падат с обема, защото постоянните разходи се разпределят върху повече единици.
+
+| Чаши на ден | Средни разходи на чаша | Печалба на месец |
+|---|---|---|
+| 50 | 4,20\ € | −1800\ € |
+| 100 | 3,00\ € | 0\ € |
+| 150 | 2,60\ € | 1800\ € |
+| 200 | 2,40\ € | 3600\ € |
+
+Кафенето до НБУ: капучино за 3,00\ €, променливи разходи 1,80\ € на чаша, постоянни разходи 3600\ € на месец.
+
+::: aside
+Цената и маржът са от примера за критичната загуба в миналата лекция. Постоянните разходи са примерни.
+:::
+
+## Откъде идват икономиите от мащаба {#s21}
+
+| Източник | Пример |
+|---------------|--------------------------|
+| Постоянни разходи върху повече единици | софтуер: кодът се пише веднъж, независимо от броя на потребителите |
+| Специализация на хора и машини | фабриката за карфици на Адам Смит: 10 работници правят 48\ 000 карфици на ден; сам човек не би направил и 20 |
+| Покупки в големи количества | Lidl: малко артикули, огромни обеми от всеки |
+
+## Граници на растежа и структура {#s22}
+
+Над определен размер средните разходи отново растат: повече нива на управление, по-бавни решения, по-слаби стимули.
+
+| Структура | Организация | Подходяща за |
+|---------|---------------|------------------|
+| Функционална | отдели по функции: производство, продажби, финанси | фирма с един продукт |
+| Дивизионна | дивизии по продукти или региони, всяка със свои функции | фирма с много продукти: DuPont и General Motors през 20-те години; днес Schwarz Group с Lidl и Kaufland |
+
+Структурата следва стратегията (Chandler 1962).
+
+# Колко широка да е фирмата?
+
+## Икономии от обхвата {#s23}
+
+Два продукта струват по-малко в една фирма, отколкото в две отделни, когато използват общ ресурс.
+
+| Общ ресурс | Пример |
+|------------|----------------------------|
+| Клиенти и приложение | Revolut: от една карта до сметки, акции и застраховки |
+| Мрежа от обекти | бензиностанцията продава гориво, кафе и храна |
+| Инфраструктура | Schwarz Group продава на външни клиенти облачните услуги STACKIT, създадени за Lidl и Kaufland |
+
+*C*(*Q*~1~, *Q*~2~) < *C*(*Q*~1~, 0) + *C*(0, *Q*~2~): двата продукта заедно струват по-малко от сбора на разходите им поотделно (Panzar & Willig 1981).
+
+## Един собственик, две вериги {#s24}
+
+|  | Lidl | Kaufland |
+|----------|----------------|----------------|
+| Асортимент | тесен, с много собствени марки | широк: над 20\ 000 артикула |
+| Разчита на | мащаб: големи обеми от всеки артикул | обхват: всичко под един покрив |
+| Собственик | Schwarz Group | Schwarz Group |
+
+Schwarz Produktion произвежда собствените марки и за двете вериги.
+
+Защо един собственик държи две вериги с различни стратегии?
+
+## Когато обхватът не помага {#s25}
+
+- Lucky-Goldstar расте десетилетия, като добавя бизнес след бизнес.
+- На 5\ април 2021\ г. LG обявява, че закрива бизнеса си с мобилни телефони след около 4,5\ млрд. долара загуби за близо шест години.
+
+Какъв общ ресурс делят телефоните с хладилниците и телевизорите? Достатъчен ли е?
+
+Разширяването си струва само когато новият продукт използва ресурс, който фирмата вече има.
+
+# Кога си струва специализацията?
+
+## Специализация и размер на пазара {#s26}
+
+:::: {.columns}
+::: {.column width="56%"}
+```{ojs}
+{
+  // The universal oven against the specialised bakery from the widget on „Собствена пекарна или доставчик?“.
+  const universal = { F: 300, v: 1.0 };
+  const specialised = { F: 1500, v: 0.4 };
+  const cross = crossover(universal.F, universal.v, specialised.F, specialised.v);
+  const line = (t) => d3.range(500, 8001, 50).map((q) => ({ Q: q, ac: averageCost(t.F, t.v, q) }));
+  const at = (q) => [
+    { Q: q, ac: averageCost(universal.F, universal.v, q), fill: "#999" },
+    { Q: q, ac: averageCost(specialised.F, specialised.v, q), fill: ink },
+  ];
+  const ends = [
+    { Q: 8000, ac: averageCost(universal.F, universal.v, 8000), label: "универсална фурна", fill: "#666" },
+    { Q: 8000, ac: averageCost(specialised.F, specialised.v, 8000), label: "специализирана пекарна", fill: ink },
+  ];
+  return Plot.plot({
+    width: 640,
+    height: 340,
+    marginLeft: 44,
+    marginRight: 24,
+    marginTop: 36,
+    marginBottom: 44,
+    style: { fontFamily: font, fontSize: "16px", color: ink },
+    ariaLabel: "Средни разходи на кроасан при универсална фурна и при специализирана пекарна",
+    x: { domain: [500, 8000], label: "кроасани на месец", tickFormat: (d) => num(d) },
+    y: { domain: [0, 3], label: "€ на брой", grid: true, tickFormat: (d) => num(d) },
+    marks: [
+      Plot.ruleX([cross], { stroke: "#999", strokeDasharray: "4 4" }),
+      Plot.text([cross], { x: (d) => d, frameAnchor: "bottom", dx: -8, dy: -8, textAnchor: "end", lineAnchor: "bottom", text: () => "специализацията\nне си струва", fill: "#666", fontSize: 14 }),
+      Plot.text([cross], { x: (d) => d, frameAnchor: "bottom", dx: 8, dy: -8, textAnchor: "start", lineAnchor: "bottom", text: () => "специализацията\nси струва", fill: "#666", fontSize: 14 }),
+      Plot.line(line(universal), { x: "Q", y: "ac", stroke: "#999", strokeWidth: 2.5, clip: true }),
+      Plot.line(line(specialised), { x: "Q", y: "ac", stroke: ink, strokeWidth: 2.5, clip: true }),
+      Plot.text(ends, { x: "Q", y: "ac", text: "label", fill: (d) => d.fill, textAnchor: "end", lineAnchor: "top", dy: 12 }),
+      Plot.dot([...at(1500), ...at(7500)], { x: "Q", y: "ac", r: 6, fill: (d) => d.fill }),
+      Plot.text(at(1500).slice(1), { x: "Q", y: "ac", dx: -6, dy: -16, textAnchor: "start", text: () => "кафенето" }),
+      Plot.text(at(7500).slice(0, 1), { x: "Q", y: "ac", dx: 6, dy: -16, textAnchor: "end", text: () => "доставчикът" }),
+    ],
+  });
+}
+```
+:::
+
+::: {.column width="44%"}
+| Разходи на брой при | 1500 | 7500 |
+|---|---|---|
+| Универсална фурна | 1,20\ € | 1,04\ € |
+| Специализирана пекарна | 1,40\ € | 0,60\ € |
+
+Кафенето прави 1500 кроасана на месец, доставчикът 7500. Специализираната пекарна се изплаща едва над 2000.
+:::
+::::
+
+Разделението на труда се ограничава от размера на пазара (Smith 1776).
+
+::: fragment
+В България живеят около 6,4\ млн. души. Къде продават Shelly и Telerik?
+:::
+
+## Накрая {#s27}
+
+„Лукойл“ държи рафинерията в Бургас, търговията на едро и верига бензиностанции. Продажбата на чуждестранните му активи на Carlyle беше обявена на 29\ януари 2026\ г. и в началото на октомври още не е приключила.
+
+1. Ще остави ли купувачът рафинерията, търговията на едро и бензиностанциите в една фирма?
+2. Кой от трите въпроса от днес решава това?
+
+## Източници {#s28}
+
+::: {.refs}
+Besanko, D., Dranove, D., Shanley, M. & Schaefer, S. (2013). *Economics of Strategy* (6th ed.). Wiley.
+
+Chandler, A. D. (1962). *Strategy and Structure*. MIT Press.
+
+Chandler, A. D. (1977). *The Visible Hand*. Harvard University Press.
+
+Coase, R. (1937). The Nature of the Firm. *Economica*.
+
+Klein, B., Crawford, R. & Alchian, A. (1978). Vertical Integration, Appropriable Rents, and the Competitive Contracting Process. *Journal of Law and Economics*.
+
+Kraemer, K., Linden, G. & Dedrick, J. (2011). Capturing Value in Global Networks: Apple's iPad and iPhone. Working paper, University of California, Irvine.
+
+Milgrom, P. & Roberts, J. (1992). *Economics, Organization and Management*. Prentice Hall.
+
+Panzar, J. & Willig, R. (1981). Economies of Scope. *American Economic Review*.
+
+Smith, A. (1776). *An Inquiry into the Nature and Causes of the Wealth of Nations*.
+
+Williamson, O. (1985). *The Economic Institutions of Capitalism*. Free Press.
+:::
+
+::: aside
+Новини: БТА, „Марица“, „Таралеж“, Economic.bg, Mediapool, Modaes, Nasdaq, Al Jazeera, Disruption Banking. Фирмени данни: LG Chem, Shelly Group, H&M Group, Shein, Apple и McDonald's (годишни отчети за 2025\ г.), Kaufland България.
+:::
