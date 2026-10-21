@@ -13,6 +13,16 @@ format: html
     <a class="deck-title" href="lectures/entrepreneurship/">Предприемачество: динамика, продуктивност и бариери за навлизане на пазарите</a>
     <span class="deck-meta">Кой е предприемачът, струва ли си да влезеш на пазара и какво ще направят заварените играчи</span>
   </li>
+  <li>
+    <span class="deck-n">2</span>
+    <a class="deck-title" href="lectures/firm-boundaries/">Граници на фирмата: вертикална интеграция и външни отношения, хоризонтални граници и структура</a>
+    <span class="deck-meta">Какво да прави фирмата сама, какво да купува и колко голяма и широка да бъде</span>
+  </li>
+  <li>
+    <span class="deck-n">3</span>
+    <a class="deck-title" href="lectures/advantage/">Конкурентно предимство: по-евтино, по-добре и трудно за копиране</a>
+    <span class="deck-meta">Защо една фирма печели повече от съседната години наред</span>
+  </li>
 </ol>
 ```
 
