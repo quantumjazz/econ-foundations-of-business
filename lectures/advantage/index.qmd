@@ -1,0 +1,329 @@
+---
+title: "Конкурентно предимство: по-евтино, по-добре и трудно за копиране"
+subtitle: "Икономически основи на бизнеса, НБУ"
+author: "доц. д-р Виктор Аврамов"
+date: last-modified
+format: revealjs
+---
+
+## Две кафенета на една улица {#s02}
+
+Две кафенета в един квартал, едно до друго. И двете продават капучино за 3,00\ €.
+
+След пет години едното е пълно, а другото е затворено.
+
+Какво трябва да знаем, за да обясним защо?
+
+## Въпроси {#s03}
+
+1. Колко различни са фирмите?
+2. Каква стойност създава една фирма?
+3. По-евтино или по-добре?
+4. Могат ли конкурентите да копират?
+5. Колко дълго трае предимството?
+
+# Колко различни са фирмите?
+
+## Същите ресурси, двойно повече {#s04}
+
+Колко повече произвеждат по-продуктивните заводи в един сектор икономиката от по-по-малко продуктивните, със същите хора, машини и материали: 10%, 50% или 100%?
+
+::: fragment
+Почти 100%: по-добрите произвеждат почти двойно повече (Syverson 2011).
+:::
+
+::: fragment
+Защо тогава по-слабите оцеляват? Спомнете си бариерите за навлизане от лекция\ 1.
+:::
+
+::: aside
+Сравнението е между два завода в горните 10% и тези в долните 10% на разпределението по производителност в сектора на преработващата промишленост в САЩ.
+:::
+
+# Каква стойност създава една фирма?
+
+## Колко бихте платили? {#s05}
+
+Колко най-много бихте платили за едно капучино в кафенето до НБУ?
+
+::: fragment
+Тази сума е вашата **готовност за плащане** (willingness to pay). Всеки клиент има своя. Тук ще приемем, че средната е 3,60\ €.
+:::
+
+## Скалата на стойността {#s06}
+
+:::: {.columns}
+::: {.column width="50%"}
+```{=html}
+<svg viewBox="0 0 580 450" style="width:100%;height:auto" role="img" aria-labelledby="stick-t stick-d" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' fill="#222">
+<title id="stick-t">Скала на стойността на кафенето до НБУ</title>
+<desc id="stick-d">Вертикална скала в евро на чаша. Разходите са 1,80 €, цената е 3,00 €, готовността за плащане е 3,60 €. Между разходите и цената 1,20 € остават за кафенето, между цената и готовността за плащане 0,60 € остават за клиента. Създадената стойност е 1,80 €.</desc>
+<rect x="150" y="231" width="140" height="189" fill="#aaa" stroke="#222" stroke-width="1.5"/>
+<rect x="150" y="105" width="140" height="126" fill="#444" stroke="#222" stroke-width="1.5"/>
+<text x="220" y="162" text-anchor="middle" font-size="20" fill="#fff">за кафенето</text>
+<text x="220" y="187" text-anchor="middle" font-size="20" fill="#fff">1,20 €</text>
+<rect x="150" y="42" width="140" height="63" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="220" y="69" text-anchor="middle" font-size="20">за клиента</text>
+<text x="220" y="93" text-anchor="middle" font-size="20">0,60 €</text>
+<path d="M290 42H304M290 105H304M290 231H304M290 420H304" stroke="#222" stroke-width="1.5"/>
+<text x="312" y="36" font-size="21">готовност за плащане:</text>
+<text x="312" y="60" font-size="21">3,60 €</text>
+<text x="312" y="112" font-size="21">цена: 3,00 €</text>
+<text x="312" y="238" font-size="21">разходи: 1,80 €</text>
+<text x="312" y="427" font-size="21">0 €</text>
+<path d="M138 42H128V231H138" fill="none" stroke="#222" stroke-width="2.5"/>
+<text x="118" y="116" text-anchor="end" font-size="21" font-weight="600">създадена</text>
+<text x="118" y="141" text-anchor="end" font-size="21" font-weight="600">стойност</text>
+<text x="118" y="166" text-anchor="end" font-size="21" font-weight="600">1,80 €</text>
+</svg>
+```
+:::
+
+::: {.column width="50%"}
+**Създадена стойност** = готовност за плащане − разходи
+
+Цената не създава стойност. Тя само я разделя между клиента и кафенето.
+
+::: fragment
+При цена 3,40\ € клиентът получава 0,20\ €, а кафенето 1,60\ €. Създадената стойност е 1,80\ €.
+:::
+:::
+::::
+
+::: aside
+Разходите са променливите разходи на чаша от лекция\ 2: с 1,20\ € на чаша кафенето покрива 3600\ € постоянни разходи на месец при 100 чаши на ден. Скалата е по Brandenburger & Stuart (1996) и Oberholzer-Gee (2021).
+:::
+
+# По-евтино или по-добре?
+
+## Два пътя към конкурентно предимство {#s07}
+
+Предимство има фирмата, която създава повече стойност от конкурентите си. Пътищата са два (Porter 1985):
+
+| Път | Какво прави фирмата | Пример |
+|---------|-----------------|---------------------|
+| По-евтино (лидерство по разходи) | сваля разходите, без клиентите да оценяват продукта по-ниско | IKEA: мебелите пътуват в плоски кашони, а клиентите ги транспортират и сглобяват сами |
+| По-добре (диференциация) | вдига готовността за плащане повече, отколкото вдига разходите | кафенето с най-доброто кафе в квартала |
+
+::: aside
+IKEA: плоските кашони намаляват транспортните разходи, а с това и цените (The IKEA value chain).
+:::
+
+## Вашето кафене срещу това на конкурента {#s08}
+
+Конкурентът: готовност за плащане 3,60\ €, цена 3,00\ €, разходи 1,80\ €. Адаптирайте цената във вашето кафене.
+
+:::: {.columns}
+::: {.column width="46%" data-prevent-swipe=""}
+```{ojs}
+// width 260: Safari needs the room to show the digits next to the number box's arrows.
+// The column has data-prevent-swipe, so dragging a slider on a phone does not change the slide.
+viewof wtpCents = Inputs.range([240, 480], { step: 10, value: 360, label: "Готовност за плащане при вас, евроцента", width: 260 })
+```
+
+```{ojs}
+viewof costCents = Inputs.range([100, 240], { step: 10, value: 180, label: "Разходи на чаша при вас, евроцента", width: 260 })
+```
+
+```{ojs}
+viewof priceCents = Inputs.range([240, 480], { step: 10, value: 300, label: "Цена при вас, евроцента", width: 260 })
+```
+
+```{ojs}
+html`<p class="readout">Създадена стойност: <strong>${eur(vYou)}</strong> на чаша (конкурентът: ${eur(vRival)})<br>Клиентът печели: <strong>${eur(gYou)}</strong> (при конкурентът: ${eur(gRival)})<br>Кафенето печели: <strong>${eur(mYou)}</strong> на чаша (конкурентът: ${eur(mRival)})</p>`
+```
+:::
+
+::: {.column width="54%"}
+```{ojs}
+{
+  const cafes = [
+    { who: "конкурентът", ...rival },
+    { who: "вие", wtp, price, cost },
+  ];
+  // Costs at the bottom, the café's share in the middle, the customer's share on top.
+  const segments = cafes.flatMap((c) => [
+    { who: c.who, y1: 0, y2: c.cost, part: "разходи", fill: "#aaa", textFill: ink },
+    { who: c.who, y1: c.cost, y2: c.price, part: "кафенето", fill: "#444", textFill: "#fff" },
+    ...(c.wtp > c.price ? [{ who: c.who, y1: c.price, y2: c.wtp, part: "клиентът", fill: "#fff", textFill: ink }] : []),
+  ]);
+  // Labels go in the middle of segments at least 0.40 € tall. Below the price the
+  // willingness-to-pay mark crosses the café segment; if it would run through the label
+  // (within 0.30 € of its middle), the label moves to the middle of the taller part,
+  // and is left out if that part is under 0.60 €.
+  const labels = segments.flatMap((d) => {
+    const c = cafes.find((e) => e.who === d.who);
+    let [y1, y2] = [d.y1, d.y2];
+    if (d.part === "кафенето" && c.wtp < c.price && Math.abs(c.wtp - (y1 + y2) / 2) < 0.3 - 1e-9) {
+      [y1, y2] = c.wtp - y1 >= y2 - c.wtp - 1e-9 ? [y1, c.wtp] : [c.wtp, y2];
+      if (y2 - y1 < 0.6 - 1e-9) return [];
+    }
+    return y2 - y1 >= 0.4 - 1e-9 ? [{ ...d, y: (y1 + y2) / 2 }] : [];
+  });
+  return Plot.plot({
+    width: 560,
+    height: 300,
+    marginLeft: 48,
+    marginRight: 24,
+    marginTop: 36,
+    marginBottom: 36,
+    style: { fontFamily: font, fontSize: "16px", color: ink },
+    ariaLabel: "Скалите на стойността на двете кафенета: разходи, дял на кафенето и дял на клиента",
+    x: { domain: ["конкурентът", "вие"], label: null, padding: 0.3, tickSize: 0 },
+    y: { domain: [0, 5], label: "€ на чаша", grid: true, tickFormat: (d) => num(d) },
+    marks: [
+      Plot.barY(segments, { x: "who", y1: "y1", y2: "y2", fill: "fill", stroke: ink, strokeWidth: 1.5 }),
+      Plot.text(labels, { x: "who", y: "y", text: (d) => `${d.part} ${eur(d.y2 - d.y1)}`, fill: "textFill" }),
+      // The willingness-to-pay mark, and its label just above the stick. Below the price
+      // the mark sits on the dark café segment, so it gets a white edge there.
+      Plot.tickY(cafes.filter((c) => c.wtp < c.price), { x: "who", y: "wtp", stroke: "#fff", strokeWidth: 7, inset: 1.5 }),
+      Plot.tickY(cafes, { x: "who", y: "wtp", stroke: ink, strokeWidth: 3 }),
+      Plot.text(cafes, { x: "who", y: (d) => Math.max(d.wtp, d.price), lineAnchor: "bottom", dy: -6, text: (d) => `готовност ${eur(d.wtp)}`, fill: ink }),
+    ],
+  });
+}
+```
+
+```{ojs}
+html`<p class="readout"><strong>${choiceText}</strong></p>`
+```
+:::
+::::
+
+Който създава повече стойност, може да даде на клиента повече и пак да задържи повече за себе си.
+
+```{ojs}
+//| output: false
+// Shared setup for the widget on this slide.
+Plot = import("https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6.17/+esm")
+import { valueCreated, customerGain, firmMargin, choice } from "./lib/models.js"
+import { pct, num, eur } from "./lib/format.js"
+ink = "#222"
+font = "Helvetica Neue, Helvetica, Arial, sans-serif"
+```
+
+```{ojs}
+//| output: false
+rival = ({ wtp: 3.6, price: 3, cost: 1.8 })
+wtp = wtpCents / 100
+cost = costCents / 100
+price = priceCents / 100
+vYou = valueCreated(wtp, cost)
+gYou = customerGain(wtp, price)
+mYou = firmMargin(price, cost)
+vRival = valueCreated(rival.wtp, rival.cost)
+gRival = customerGain(rival.wtp, rival.price)
+mRival = firmMargin(rival.price, rival.cost)
+state = choice(wtp, price, gRival)
+choiceText = ({ you: "Клиентите идват при вас", rival: "Клиентите отиват при конкурента", split: "Клиентите се делят между двете кафенета", none: "Цената е над готовността за плащане: никой не купува при вас" })[state]
+```
+
+## Как печели всяка от тях? {#s09}
+
+1. Wizz Air
+2. Lidl
+3. Apple
+4. Кварталната фурна с опашка всяка сутрин
+5. Decathlon
+6. Revolut
+
+По-евтино, по-добре или и двете?
+
+# Могат ли конкурентите да копират?
+
+## Конкурентът копира {#s10}
+
+| Вашето предимство | Какво прави конкурентът |
+|---------------------|-------------------|
+| Нова кафемашина, която пести 0,20\ € на чаша | купува същата машина следващия месец |
+| По-добро кафе от нов доставчик | поръчва от същия доставчик |
+| По-ниска цена | сваля цената още утре |
+
+Каквото може да се купи, може и да се копира.
+
+## Три въпроса за конкурентното предимство {#s11}
+
+| Въпрос | Ако отговорът е „не“ |
+|-------------------|-------------------|
+| Ценно ли е за клиентите? | не е предимство |
+| Рядко ли е? | имат го всички |
+| Трудно ли се копира? | скоро ще го имат всички |
+
+Трайно е само това предимство, което има три пъти „да“ (Barney 1991).
+
+Кафемашината, най-добрият бариста в квартала или екип, който работи заедно от години: кое минава и трите въпроса?
+
+## Какво трудно се копира {#s12}
+
+| Защо | Пример |
+|-------------------|---------------------|
+| Не се вижда | как един екип работи заедно от години |
+| Иска време | репутация: не се купува, гради се с години (Dierickx & Cool 1989) |
+| Всичко си пасва | Southwest Airlines: следващият слайд |
+
+## Да копираш части, а не цялото {#s13}
+
+- 1993\ г.: Continental Airlines създава Continental Lite, за да копира Southwest: кратки полети с ниски цени и без допълнителни услуги.
+- За по-малко от година полетите стават от 173 на 1000 на ден.
+- Ниските разходи на Southwest така и не идват. През 1994\ г. Continental Lite е на загуба, а през 1995\ г. е закрита.
+
+::: fragment
+Southwest не е списък от отделни решения, а система, в която всичко си пасва. Копирането на части не стига (Porter 1996).
+:::
+
+::: aside
+Continental Airlines, годишен отчет за 1994\ г.; Flight International (януари и април 1995\ г.).
+:::
+
+# Колко дълго трае предимството?
+
+## Предимствата избледняват {#s14}
+
+Изследване на 6772 фирми от 40 сектора за 25 години: само малка част от тях се представят по-добре от сектора си, и то много рядко за дълго (Wiggins & Ruefli 2002).
+
+Защо предимствата изчезват?
+
+Кое от предимствата на любимото ви кафене ще е там и след 10 години?
+
+## Кой прибира предимството? {#s15}
+
+Вашият бариста е най-добрият в квартала и клиентите идват заради него. Кафенето отсреща му предлага по-висока заплата.
+
+::: fragment
+Той ще поиска увеличение и ще прибере част от стойността, която създава. Хазяинът прави същото, ако предимството е мястото (лекция\ 4).
+:::
+
+::: fragment
+Фирмата може да задържи най-много толкова, колкото стойност би изчезнала без нея (Brandenburger & Stuart 1996).
+:::
+
+## Накрая {#s16}
+
+Помислете за фирма, от която купувате често.
+
+1. По-евтина ли е или по-добра от конкурентите си?
+2. Какво от това конкурентите не могат да копират?
+
+## Източници {#s17}
+
+::: {.refs}
+Barney, J. B. (1991). Firm Resources and Sustained Competitive Advantage. *Journal of Management*.
+
+Brandenburger, A. M. & Stuart, H. W. (1996). Value-based Business Strategy. *Journal of Economics & Management Strategy*.
+
+Dierickx, I. & Cool, K. (1989). Asset Stock Accumulation and Sustainability of Competitive Advantage. *Management Science*.
+
+Oberholzer-Gee, F. (2021). *Better, Simpler Strategy*. Harvard Business Review Press.
+
+Porter, M. E. (1985). *Competitive Advantage*. Free Press.
+
+Porter, M. E. (1996). What Is Strategy? *Harvard Business Review*.
+
+Syverson, C. (2011). What Determines Productivity? *Journal of Economic Literature*.
+
+Wiggins, R. R. & Ruefli, T. W. (2002). Sustained Competitive Advantage: Temporal Dynamics and the Incidence and Persistence of Superior Economic Performance. *Organization Science*.
+:::
+
+::: aside
+Фирмени данни: Continental Airlines (годишен отчет за 1994\ г.), IKEA. Новини: Flight International (1995\ г.).
+:::
