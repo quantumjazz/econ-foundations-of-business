@@ -1,0 +1,271 @@
+---
+title: "Времето в бизнеса: лихва, стойност днес и финансиране"
+subtitle: "Икономически основи на бизнеса, НБУ"
+author: "доц. д-р Виктор Аврамов"
+date: last-modified
+format: revealjs
+---
+
+## Днес или на вноски? {#s02}
+
+През ноември 2022\ г. един билет печели джакпота на американската лотария Powerball. Печелившият избира: 997,6\ млн. долара веднага или 2,04\ млрд. долара на 30 вноски за 29 години.
+
+Кое бихте избрали?
+
+## Въпроси {#s03}
+
+1. Защо парите трябват преди приходите?
+2. Защо 100\ € днес струват повече от 100\ € след година?
+3. Колко струват днес парите от бъдещето?
+4. Откъде да намерим пари за начало?
+5. Заем или инвеститор?
+
+# Защо парите трябват преди приходите?
+
+## Лозето {#s04}
+
+Решавате да създадете лозе. Земята, лозите и работата струват 50\ 000\ €.
+
+Първото грозде идва чак на третата или четвъртата година, а виното се продава още по-късно.
+
+Всяка фирма плаща, преди да продаде: наем, стока, заплати, машини. Откъде идват парите дотогава?
+
+::: aside
+Срокът за първата реколта е по Iowa State University Extension.
+:::
+
+# Защо 100\ € днес струват повече от 100\ € след година?
+
+## Цената на чакането {#s05}
+
+- Парите днес могат да работят. Вложени в депозит или в бизнес, носят доход.
+- Предпочитаме днес пред утре от нетърпение: по-добре сега, отколкото след година.
+- Цените растат, затова след година със 100\ € купуваме по-малко.
+
+Лихвата е цената на чакането (Fisher 1930).
+
+## Лихва върху лихвата {#s06}
+
+| След | 100\ € при 5% годишно |
+|---------------|---------------|
+| 1 година | 105\ € |
+| 10 години | 163\ € |
+| 20 години | 265\ € |
+| 30 години | 432\ € |
+
+Всяка година лихвата се начислява и върху натрупаните лихви. При 5% годишно парите се удвояват за около 14 години: 72\ ÷\ 5\ ≈\ 14.
+
+## Колко плаща банката за чакането? {#s07}
+
+| Юни 2026\ г. | Годишно |
+|---------------------|---------------|
+| Лихва по нови срочни депозити на домакинствата | 1,57% |
+| Лихва по нови кредити за фирми до 1\ млн. евро | 4,20% |
+| Инфлация | 5,4% |
+
+Какво става със 100\ € в депозит за една година?
+
+::: fragment
+Стават 101,57\ €, но цените се вдигат с 5,4%: с тях ще купим по-малко, отколкото днес.
+:::
+
+::: aside
+БНБ, лихвена статистика за юни 2026\ г.; НСИ, инфлация за юни 2026\ г., по БНР.
+:::
+
+# Колко струват днес парите от бъдещето?
+
+## Виното: сега или по-късно? {#s08}
+
+Първото вино е готово. Можете да го продадете сега за 8000\ € и да вложите парите с лихва или да го отлежите и да го продадете по-скъпо.
+
+:::: {.columns}
+::: {.column width="46%" data-prevent-swipe=""}
+```{ojs}
+// width 260: Safari needs the room to show the digits next to the number box's arrows.
+// The column has data-prevent-swipe, so dragging a slider on a phone does not change the slide.
+viewof ratePct = Inputs.range([0, 12], { step: 1, value: 5, label: "Лихва, % годишно", width: 260 })
+```
+
+```{ojs}
+viewof years = Inputs.range([1, 5], { step: 1, value: 2, label: "Години отлежаване", width: 260 })
+```
+
+```{ojs}
+viewof laterEur = Inputs.range([8000, 12000], { step: 200, value: 9200, label: "Цена на отлежалото вино, €", width: 260 })
+```
+
+```{ojs}
+html`<p class="readout">Продадено сега и вложено: <strong>${eur(grown)}</strong> след ${num(years)} ${years === 1 ? "година" : "години"}<br>Отлежалото вино струва днес: <strong>${eur(pv)}</strong></p>`
+```
+:::
+
+::: {.column width="54%"}
+```{ojs}
+{
+  const width = 560, height = 300, marginLeft = 64, marginRight = 24, marginTop = 36, marginBottom = 44;
+  // The labels are placed in the chart's units: euros and years per pixel.
+  const eurPerPx = (15000 - 6000) / (height - marginTop - marginBottom);
+  const yearsPerPx = 5 / (width - marginLeft - marginRight);
+  const grow = (t) => futureValue(nowEur, r, t);
+  const path = d3.range(0, 51).map((i) => ({ t: i / 10, v: grow(i / 10) }));
+  // How many years of the axis a label covers, measured in the chart's font.
+  const ctx = document.createElement("canvas").getContext("2d");
+  ctx.font = `16px ${font}`;
+  const yearsWide = (s) => ctx.measureText(s).width * yearsPerPx;
+  const lineText = `${num(nowEur)} €, вложени с лихва`;
+  const wineText = "отлежалото вино";
+  const half = yearsWide(wineText) / 2;
+  // The line rises to the right, so the aged wine's label goes up and to the left of a dot on or
+  // above the line, and down and to the right of a dot below it. At year 1 there is no room on
+  // the left, so the label goes straight above the dot; at years 4 and 5 there is none on the
+  // right, so it goes straight below, kept inside the chart. Those two are moved up or down
+  // until the line clears them.
+  const above = state !== "sell";
+  let wine;
+  if (above && years > 1) {
+    wine = { x: years, y: laterEur + 10 * eurPerPx, dx: -10, textAnchor: "end", lineAnchor: "bottom" };
+  } else if (above) {
+    wine = { x: years, y: Math.max(laterEur + 13 * eurPerPx, grow(years + half) + 5 * eurPerPx), dx: 0, textAnchor: "middle", lineAnchor: "bottom" };
+  } else if (years <= 3) {
+    wine = { x: years, y: laterEur - 10 * eurPerPx, dx: 10, textAnchor: "start", lineAnchor: "top" };
+  } else {
+    const x = Math.min(years, 5 + 7 * yearsPerPx - half);
+    wine = { x, y: Math.min(laterEur - 10 * eurPerPx, grow(x - half) - 5 * eurPerPx), dx: 0, textAnchor: "middle", lineAnchor: "top" };
+  }
+  // The line's label sits above the line's right end. When the aged wine's dot is under that
+  // label, the label goes below the line if the dot is on or above it, and stays above the dot
+  // if the dot is just below the line.
+  const lineLeft = 5 - 4 * yearsPerPx - yearsWide(lineText);
+  const dotUnder = years + 11 * yearsPerPx > lineLeft;
+  const lineBelow = above && dotUnder;
+  const lineY = lineBelow
+    ? grow(lineLeft) - 10 * eurPerPx
+    : Math.max(grow(5) + 6 * eurPerPx, dotUnder ? laterEur + 13 * eurPerPx : -Infinity);
+  // A white edge behind each label hides the grid and the dashed rule where they pass under it.
+  const halo = { stroke: "#fff", strokeWidth: 4, strokeLinejoin: "round", paintOrder: "stroke" };
+  return Plot.plot({
+    width,
+    height,
+    marginLeft,
+    marginRight,
+    marginTop,
+    marginBottom,
+    style: { fontFamily: font, fontSize: "16px", color: ink },
+    ariaLabel: `Как растат ${num(nowEur)} €, вложени с лихва, и цената на отлежалото вино`,
+    x: { domain: [0, 5], ticks: [0, 1, 2, 3, 4, 5], tickFormat: (d) => num(d), label: "години" },
+    y: { domain: [6000, 15000], label: "€", grid: true, tickFormat: (d) => num(d) },
+    marks: [
+      Plot.ruleX([years], { stroke: "#999", strokeDasharray: "4 4" }),
+      Plot.line(path, { x: "t", y: "v", stroke: ink, strokeWidth: 2.5, clip: true }),
+      Plot.dot([{ t: 0, v: nowEur }], { x: "t", y: "v", r: 6, fill: "#999" }),
+      Plot.dot([{ t: years, v: laterEur }], { x: "t", y: "v", r: 7, fill: ink }),
+      Plot.text([lineText], { x: () => 5, y: () => lineY, text: (d) => d, textAnchor: "end", lineAnchor: lineBelow ? "top" : "bottom", dx: -4, fill: ink, ...halo }),
+      Plot.text(["сега"], { x: () => 0, y: () => nowEur, text: (d) => d, textAnchor: "start", lineAnchor: "top", dx: 8, dy: 10, fill: "#666", ...halo }),
+      Plot.text([wineText], { x: () => wine.x, y: () => wine.y, text: (d) => d, textAnchor: wine.textAnchor, lineAnchor: wine.lineAnchor, dx: wine.dx, fill: ink, ...halo }),
+    ],
+  });
+}
+```
+
+```{ojs}
+html`<p class="readout"><strong>${stateText}</strong></p>`
+```
+:::
+::::
+
+Стойност днес = сума след *t* години ÷ (1 + лихвата)^*t*^. Колкото по-висока е лихвата, толкова по-малко си струва чакането.
+
+```{ojs}
+//| output: false
+// Shared setup for the widget on this slide.
+Plot = import("https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6.17/+esm")
+import { futureValue, presentValue, waitOrSell } from "./lib/models.js"
+import { pct, num, eur } from "./lib/format.js"
+ink = "#222"
+font = "Helvetica Neue, Helvetica, Arial, sans-serif"
+```
+
+```{ojs}
+//| output: false
+nowEur = 8000
+r = ratePct / 100
+grown = futureValue(nowEur, r, years)
+pv = presentValue(laterEur, r, years)
+state = waitOrSell(nowEur, laterEur, r, years)
+stateText = ({ wait: "Отлежете виното", sell: "Продайте сега", edge: "Все едно" })[state]
+```
+
+## Отговорът на лотарията {#s09}
+
+997,6\ млн. долара е сумата, която трябва да има в наградния фонд в деня на тегленето, за да се изплатят 30-те вноски от общо 2,04\ млрд. долара.
+
+За лотарията двете предложения струват еднакво днес. Печелившият взима парите веднага, както повечето печеливши.
+
+Кога бихте предпочели вноските?
+
+::: aside
+Powerball (ноември 2022\ г.); The Hill (февруари 2023\ г.).
+:::
+
+# Откъде да намерим пари за начало?
+
+## Три начина да платим предварително {#s10}
+
+| Източник | Какво давате | Ако не потръгне |
+|-------------------|-------------------|-------------------|
+| Собствени пари | нищо | губите своите пари |
+| Заем | връщате сумата с лихвата в срок | пак дължите сумата с лихвата |
+| Инвеститор | дял от фирмата | инвеститорът губи заедно с вас |
+
+Собствени пари имат малцина. Затова наследство или печалба от лотария вдигат шанса човек да започне бизнес (лекция\ 1; Holtz-Eakin и др. 1994; Lindh & Ohlsson 1996).
+
+# Заем или инвеститор?
+
+## Ако потръгне и ако не потръгне {#s11}
+
+Нямате 50\ 000\ € за лозето. След 5 години то ще струва 150\ 000\ €, ако всичко върви добре, или 20\ 000\ € (само земята), ако градушка и болести унищожат реколтите.
+
+| Какво ви остава след 5 години | Ако потръгне | Ако не потръгне |
+|-----------------------------|-----------|-----------|
+| Заем от 50\ 000\ € при 5%: връщате 64\ 000\ € | 86\ 000\ € | −44\ 000\ € |
+| Инвеститор дава 50\ 000\ € за половината лозе | 75\ 000\ € | 10\ 000\ € |
+
+Със заем печалбата е цялата ваша, но и загубата. С инвеститор делите и двете.
+
+::: aside
+64\ 000\ € са 50\ 000\ € при 5% годишно за 5 години, закръглено. При −44\ 000\ € сте дали лозето на банката и още ѝ дължите.
+:::
+
+## Кой дава заем и кой инвестира? {#s12}
+
+- Банката не получава повече, ако идеята успее. Затова иска сигурност: обезпечение, например земята под лозето.
+- Инвеститорът дели печалбата. Затова влиза и в рискови идеи, които могат да пораснат много.
+- През 2022\ г. българската фирма Payhawk получава 100\ млн. долара от инвеститори и става първата българска фирма с оценка от 1\ млрд. долара.
+
+Кой би финансирал лозето ви и кой – мобилно приложение?
+
+::: aside
+Payhawk (март 2022\ г.).
+:::
+
+## Накрая {#s13}
+
+Имате идея, за която трябват 40\ 000\ €.
+
+1. Колко от тях можете да съберете сами?
+2. Заем или инвеститор: кое избирате и защо?
+
+## Източници {#s14}
+
+::: {.refs}
+Fisher, I. (1930). *The Theory of Interest*. Macmillan.
+
+Holtz-Eakin, D., Joulfaian, D. & Rosen, H. (1994). Entrepreneurial Decisions and Liquidity Constraints. *RAND Journal of Economics*.
+
+Lindh, T. & Ohlsson, H. (1996). Self-Employment and Windfall Gains: Evidence from the Swedish Lottery. *Economic Journal*.
+:::
+
+::: aside
+Данни: БНБ и НСИ (2026\ г.), Powerball и The Hill (2022–2023\ г.), Payhawk (2022\ г.), Iowa State University Extension.
+:::

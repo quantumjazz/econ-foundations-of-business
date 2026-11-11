@@ -7,3 +7,5 @@
 Конкурентно предимство: по-евтино, по-добре и трудно за копиране — [▶ View Slides](https://quantumjazz.github.io/econ-foundations-of-business/lectures/advantage/)
 
 Мястото на бизнеса: клиенти, конкуренти и наем — [▶ View Slides](https://quantumjazz.github.io/econ-foundations-of-business/lectures/place/)
+
+Времето в бизнеса: лихва, стойност днес и финансиране — [▶ View Slides](https://quantumjazz.github.io/econ-foundations-of-business/lectures/time/)
